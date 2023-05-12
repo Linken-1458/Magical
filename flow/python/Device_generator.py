@@ -20,7 +20,7 @@ class Device_generator(object):
 
     def setGDS(self, outfile):
         """
-        @brief Set output GDSII file
+        @brief Set output GDSII file            輸出GDSII文件
         Should be removed after writing to Cpp DB
         """
         self.outGDS = outfile

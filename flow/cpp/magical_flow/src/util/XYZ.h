@@ -48,7 +48,7 @@ public:
     explicit XYZ(XY<XYType> xy, ZType z) : _xy(xy), _z(z) {}
     explicit XYZ(XYType x, XYType y) :_xy(x,y), _z(0) { MsgPrinter::wrn("%s, filling in 0 as z for XYZ(x,y) \n", __PRETTY_FUNCTION__);}
 
-    /// Getters
+    /// Getters     类成员初始化
     XYType                x() const                           { return _xy.x(); }
     XYType                y() const                           { return _xy.y(); }
     ZType                 z() const                           { return _z; }
@@ -60,7 +60,7 @@ public:
     XYZ<XYType, ZType>    top() const                         { return XYZ<XYType, ZType>(_xy.x(), _xy.y(), _z + 1); }
     XYZ<XYType, ZType>    bottom() const                      { return XYZ<XYType, ZType>(_xy.x(), _xy.y(), _z - 1); }
 
-    /// Setters
+    /// Setters     类成员初始化
     void                  setX(XYType x)                       { _xy.setX(x); }
     void                  setY(XYType y)                       { _xy.setY(y); }
     void                  setZ(ZType z)                        { _z = z; }
@@ -73,7 +73,7 @@ public:
     bool                  operator<(const XYZ<XYType, ZType> &rhs)  const  { return _z == rhs.z() ? _xy < rhs.xy() : _z < rhs.z(); }
 
 
-    /// Find the relative position of the rhs TO this
+    /// Find the relative position of the rhs TO this       找到rhs到这个的相对位置 
     PtPosType             ptPos(const XYZ<XYType, ZType> &rhs) const
     {
         if (north() == rhs)
@@ -152,7 +152,7 @@ struct XYZHashFunc
 PROJECT_NAMESPACE_END
 
 
-/// Hash function
+/// Hash function       哈希函数
 namespace std
 {
     template<typename T, typename U> 

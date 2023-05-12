@@ -8,58 +8,67 @@ import gdspy
 import device_generation.glovar as glovar
 import time
 
+
+##========================= 布局 ============================##
 class Placer(object):
-    def __init__(self, magicalDB, cktIdx, dirname, gridStep, halfMetWid):
-        self.mDB = magicalDB
-        self.dDB = magicalDB.designDB.db
-        self.tDB = magicalDB.techDB
+    
+
+    def __init__(self, magicalDB, cktIdx, dirname, gridStep, halfMetWid):       # 初始化magicalDB, cktIdx, dirname, gridStep, halfMetWid等属性
+        self.mDB = magicalDB                                
+        self.dDB = magicalDB.designDB.db                                        # 访问设计库
+        self.tDB = magicalDB.techDB                                             # 访问技术库
         self.debug = True
         self.cktIdx = cktIdx
-        self.ckt = self.dDB.subCkt(cktIdx)
-        self.placer = IdeaPlaceExPy.IdeaPlaceEx()
+        self.ckt = self.dDB.subCkt(cktIdx)                                      # 初始化debug、cktIdx和ckt属性，ckt用于访问电路信息
+        self.placer = IdeaPlaceExPy.IdeaPlaceEx()                               # 初始化placer属性，指向布局放置的placer对象
         self.dirname = dirname
         self.numCktNodes = self.ckt.numNodes() # without io pins
         self.gridStep = gridStep 
-        self.halfMetWid = halfMetWid
+        self.halfMetWid = halfMetWid                                            # 初始化dirname、numCktNodes、gridStep、halfMetWid等属性，提供相关信息用于布局
         self.subShapeList = list()
         self.params = magicalDB.params
         self.nodeToCellIdx = []
         self.placeParams()
-        self.guardRingGrCells = []
-        self.implRealLayout = True # if we want to implement new layout 
+        self.guardRingGrCells = []                                              # 初始化subShapeList、params、nodeToCellIdx、uardRingGrCells列表，调用placeParams()
+        self.implRealLayout = True  # if we want to implement new layout        # True时生成新的布局
+    
     def placeParams(self):
-        self.deviceProximityTypes = [magicalFlow.ImplTypePCELL_Nch, magicalFlow.ImplTypePCELL_Pch]
-    def run(self):
+        self.deviceProximityTypes = [magicalFlow.ImplTypePCELL_Nch, magicalFlow.ImplTypePCELL_Pch]      # 指定晶体管的类型，用于后续的近邻约束
+    
+
+    def run(self):                                                              
         self.useIoPin = True
         self.usePowerStripe = True
-        self.isTopLevel = False
-        if (self.dDB.rootCktIdx() ==  self.cktIdx):
+        self.isTopLevel = False                                                 # 初始化useIoPin、usePowerStripe、isTopLevel属性
+        if (self.dDB.rootCktIdx() ==  self.cktIdx):                             # 当前电路为根级电路，设置useIoPin = False(不使用IO引脚)，标志为True
             self.useIoPin = False
             self.isTopLevel = True
-        if not self.implRealLayout:
+        if not self.implRealLayout:                                             # 如果不实现真正布局(implRealLayout为False)，将useIoPin = False
             self.useIoPin = False # in early floorplan stage, don't need real io pins
-        self.dumpInput()
-        self.placer.numThreads(1) #FIXME
+        self.dumpInput()                                                        # 调用dumpInput()为placer提供输出
+        self.placer.numThreads(1) #FIXME                                        # 调用placer.numThreads()设置线程数为1
         start = time.time()
-        self.symAxis = self.placer.solve(self.gridStep)
+        self.symAxis = self.placer.solve(self.gridStep)                         # 调用placer.solve()执行布局
         end = time.time()
         self.runtime = end-start
-        print("placement finished: ", self.ckt.name, "runtime", end-start)
-        self.processPlacementOutput()
-    def dumpInput(self):
-        self.placer.readTechSimpleFile(self.params.simple_tech_file)
-        self.placeParsePin()
-        self.placeConnection()
-        self.placer.readSymFile(self.dirname + self.ckt.name + '.sym') # FIXME: use in memory interface
-        self.placeParseSigpath()
-        self.computeAndAddPowerCurrentFlow()
-        self.placeParseBoundary()
+        print("placement finished: ", self.ckt.name, "runtime", end-start)      # 打印运行时间
+        self.processPlacementOutput()                                           # 调用processPlacementOutput()处理布局输出
+    
+
+    def dumpInput(self):                                                        # 为placer提供输入   
+        self.placer.readTechSimpleFile(self.params.simple_tech_file)            # 读取tech文件，为placer提供工艺信息
+        self.placeParsePin()                                                    # 定义pin
+        self.placeConnection()                                                  # 设置连接
+        self.placer.readSymFile(self.dirname + self.ckt.name + '.sym') # FIXME: use in memory interface     # 读取.sym文件，为placer提供电路符号信息
+        self.placeParseSigpath()                                                # 解析信号路径
+        self.computeAndAddPowerCurrentFlow()                                    # 计算电流并添加功率网络
+        self.placeParseBoundary()                                               # 解析边界
         if self.debug:
             gdspy.current_library = gdspy.GdsLibrary()
             self.tempCell = gdspy.Cell("FLOORPLAN")
-        self.configureIoPinParameters()
-        self.placer.readSymNetFile(self.dirname + self.ckt.name + '.symnet') # FIXME: use in memory interface
-        #self.feedDeviceProximity()
+        self.configureIoPinParameters()                                         # 配置IO引脚参数
+        self.placer.readSymNetFile(self.dirname + self.ckt.name + '.symnet') # FIXME: use in memory interface  # 读取.symnet文件，为placer提供netlist信息 
+        #self.feedDeviceProximity()                                             # 为placer指定晶体管的近邻约束
     
     def placeParseSigpath(self):
         filename = self.dirname + self.ckt.name + '.sigpath' #FIXME: use in memeory interface

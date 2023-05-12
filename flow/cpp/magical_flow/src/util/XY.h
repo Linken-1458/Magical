@@ -9,7 +9,7 @@
 
 PROJECT_NAMESPACE_BEGIN
 
-/// enum type for position of segments versus points
+/// enum type for position of segments versus points        线段相对于点的位置的枚举类型
 enum class PtPosType : std::uint8_t
 {
     NORTH        = 0,
@@ -44,7 +44,7 @@ public:
     template <typename U>
     explicit XY(const XY<U> &other) : _x((T)other.x()), _y((T)other.y()) {}
 
-    // Getters
+    // Getters      类成员初始化
     T        x() const        { return _x; }
     T        y() const        { return _y; }
     XY<T>    left() const     { return XY<T>(_x - 1, _y); }
@@ -52,7 +52,7 @@ public:
     XY<T>    bottom() const   { return XY<T>(_x, _y - 1); }
     XY<T>    top() const      { return XY<T>(_x, _y + 1); }
 
-    // Setters
+    // Setters      类成员初始化
     void     setX(T x)       { _x = x; }
     void     setY(T y)       { _y = y; }
     void     setXY(T x, T y) { _x = x; _y = y; }
@@ -79,7 +79,7 @@ public:
     template <typename U>
     XY<T> &                                              operator/=(U rhs)                  { _x /= rhs; _y /= rhs; return *this; }
 
-    /// Find the relative position of the rhs TO this
+    /// Find the relative position of the rhs TO this       找到rhs到这个的相对位置 
     PtPosType             ptPos(const XY<T> &rhs) const
     {
         if (top() == rhs)
@@ -141,7 +141,7 @@ struct XYHashFunc
 
 PROJECT_NAMESPACE_END
 
-/// Hash function
+/// Hash function       哈希函数
 namespace std
 {
     template<typename T> 

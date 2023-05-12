@@ -2,7 +2,7 @@
 #define _B_LIB_ILP_H_
 
 // ============================================================== //
-//   Library for ILP applications
+//   Library for ILP applications      ILP应用程序库 
 //   Author        : Bei Yu
 //   Last update   : 12/2014
 // ============================================================== //
@@ -16,40 +16,41 @@
 
 namespace bLib
 {
-    // Input  : lp file named by l_inIlpName
-    // Output : standard output format in file named by l_outIlpName
+    // Input  : lp file named by l_inIlpName        由l_inIlpName命名的lp文件
+    // Output : standard output format in file named by l_outIlpName        以l_outIlpName命名的文件中的标准输出格式
     const  std::string  l_inIlpName  = "problem.lp";  // ILP input file name
-    const  std::string  l_tmpIlpName = "tmp.lp";      // internal ILP output file name
+    const  std::string  l_tmpIlpName = "tmp.lp";      // internal ILP output file name      内部ILP输出文件名 
     const  std::string  l_outIlpName = "problem.sol"; // ILP output file name
     inline std::string  getInIlpName()        { return l_inIlpName;  }
     inline std::string  getOutIlpName()       { return l_outIlpName; }
 
 
     // =====================================================
-    //               for GUROBI solver
+    //               for GUROBI solver  适用于GUROBI解算器 
     // =====================================================
-    // max_time : maximum allowed runtime (in seconds)
-    // gap_abs  : the gap value when terminate ILP
-    // threads  : thread #
+    // max_time : maximum allowed runtime (in seconds)  max_time：允许的最大运行时间（秒） 
+    // gap_abs  : the gap value when terminate ILP      gap_abs：终止ILP时的间隙值 
+    // threads  : thread #                              threads ：思路
     inline void prepareGurobi(int max_time=-1, double gap_abs=0.0, int threads=-1)
     //{{{
     {
-        // prepare rungrb.csh
-        std::ifstream cshtest("rungrb.csh");
+        // prepare rungrb.csh       准备运行GUROBI解算器
+        std::ifstream cshtest("rungrb.csh");        // 读文件操作（std::ifstream)
         if (!cshtest.good())
         {
-            std::ofstream outcsh("rungrb.csh");
-            outcsh<<"#!/bin/csh -f"<<std::endl;
+            std::ofstream outcsh("rungrb.csh");     // 定义ofstream对象outcsh("rungrb.csh")
+            outcsh<<"#!/bin/csh -f"<<std::endl;     // 如果第一行以#开始, 系统会用Cshell执行script.等同于#!/bin/csh
             outcsh<<"gurobi.sh ./rungrb.grb"<<std::endl;
             outcsh.close();
         }
         cshtest.close();
 
-        // prepare rungrb.grb
+        // prepare rungrb.grb       准备运行GUROBI解算器
         std::ifstream grbtest("rungrb.grb");
         if (!grbtest.good())
         {
             std::ofstream outgrb("rungrb.grb");
+            outgrb<<"from gurobipy import *"<<std::endl;
             outgrb<<"from gurobipy import *"<<std::endl;
             outgrb<<"m = read(\"" << l_inIlpName<<"\");"<<std::endl;
             if (max_time>0)          outgrb<<"m.setParam(\'TimeLimit\', "<<max_time<<");"<<std::endl;
@@ -87,14 +88,14 @@ namespace bLib
 
 
     // =====================================================
-    //               for CPLEX solver
+    //               for CPLEX solver       用于CPLEX解算器
     // =====================================================
     inline void prepareCplex()
     //{{{
     {
-        // prepare runcpl.csh
-        // call runcpl.cplex to solve ILP;
-        // call formatCPLEX.py to generate standard format result
+        // prepare runcpl.csh      准备runcpl.csh
+        // call runcpl.cplex to solve ILP;      调用runcpl.cplex来解决ILP
+        // call formatCPLEX.py to generate standard format result       调用formatCPLEX.py生成标准格式结果
         std::ifstream cshtest("runcpl.csh");
         if (!cshtest.good())
         {
@@ -134,7 +135,7 @@ namespace bLib
             outpy<<"xmldoc = minidom.parse('" << l_tmpIlpName << "')"<<std::endl;
             outpy<<"itemlist = xmldoc.getElementsByTagName('variable')"<<std::endl;
             outpy<<"for s in itemlist:"<<std::endl;
-            outpy<<"    print '%s  %s' % (s.attributes['name'].value, s.attributes['value'].value)"<<std::endl;
+            outpy<<"print '%s  %s' % (s.attributes['name'].value, s.attributes['value'].value)"<<std::endl;
             outpy.close();
         }
         pytest.close();
@@ -165,9 +166,9 @@ namespace bLib
 
 
     // =====================================================
-    //                 for CBC solver
+    //                 for CBC solver   用于CBC解算器
     // =====================================================
-    // NOTE: CURRENTLY CBC OUTPUT FILE IS NOT STANDARD
+    // NOTE: CURRENTLY CBC OUTPUT FILE IS NOT STANDARD      注意：当前CBC输出文件不是标准的
     inline bool solveCbc(bool sim_out)
     {
         FILE* command;
@@ -189,6 +190,10 @@ namespace bLib
 // 10/2014: maximum runtime as parameter in prepareGurobi()
 // 05/2014: defined as inline functions
 // 05/2014: introduce namespace bLib
+/2014年12月：准备中的更多参数Gurobi（）
+//2014年10月：prepareGurobi（）中的最大运行时间参数
+//2014年5月：定义为内联函数
+//2014年5月：引入命名空间bLib 
 //
 */
 

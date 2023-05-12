@@ -1,0 +1,2961 @@
+========================================================
+    MAGICAL: Machine Generated Analog IC Layout            
+        https://github.com/magical-eda/MAGICAL
+========================================================
+[I] parameters = {'spectre_netlist': None, 'hspice_netlist': 'CTDSM_TOP.sp', 'simple_tech_file': '../mockPDK/techfile.simple', 'resultDir': './'}
+//******'spectre_netlist', 'hspice_netlist',    'simple_tech_file': mockPDK    'resultDir'  *****//
+
+PnR: working on  INPUT_RES
+add pin 0 to cell INPUT_RES_xr13
+add pin 1 to cell INPUT_RES_xr13
+add pin 0 to cell INPUT_RES_xr14
+add pin 1 to cell INPUT_RES_xr14
+[WRN 2023-03-28 14:21:44     0 sec]  Ideaplace: Using file parser readSymFile. This is designed for internal debugging only and may not be kept maintained 
+computeAndAddPowerCurrentFlow
+//******Ideaplace:使用文件解析器readSymFile。这是专为内部调试而设计的，不能保持维护computeAndAddPowerCurrentFlow******//
+
+//******VCC：C=circuit 表示电路的意思, 即接入电路的电压；            VDD：D=device 表示器件的意思, 即器件内部的工作电压； *****//
+//******VSS：S=series 表示公共连接的意思，通常指电路公共接地端电压。    GND：在电路里常被定为电压参考基点。                 ****//
+//******VEE：负电压供电；场效应管的源极（S）                         VPP：编程/擦除电压。                             ****//
+
+[DBG 2023-03-28 14:21:44     0 sec]  mark net GND as vss 
+[WRN 2023-03-28 14:21:44     0 sec]  Ideaplace: Using file parser readSymNetFile. This is designed for internal debugging only and may not be kept maintained 
+[INF 2023-03-28 14:21:44     0 sec]  Symnet parser: reading ./INPUT89_RES.symnet...
+[INF 2023-03-28 14:21:44     0 sec]  ParserSymNet:: left net VINP 0, right net VINN 1
+[INF 2023-03-28 14:21:44     0 sec]  ParserSymNet:: left net OTA1_INP 2, right net OTA1_INN 3
+[INF 2023-03-28 14:21:44     0 sec]  Ideaplace: Entering global placement...    进入全局布局
+[INF 2023-03-28 14:21:44     0 sec]  NlpWnconj::initBoundaryParams: automatical set boundary to be Box:x = [-7.98436,7.98436];y = [-9.39336,9.39336]:   自动设置边界
+[INF 2023-03-28 14:21:44     0 sec]  Ideaplace global placement:: number of operators 7, hpwl 4 ovl 1 oob 0 asym 1 sigFlow 0 power 1 crf    运算器数量7、HPWL为网表中所有节点的边界框的半周长（线长）、overlay重叠面积为1、boundary边界约束为0、asym对称约束为1
+[INF 2023-03-28 14:21:44     0 sec]  First order NLP: iter 0 
+[INF 2023-03-28 14:21:44     0 sec]  Ideaplace: Entering legalization and detailed placement... 进入合法化和详细布局
+[INF 2023-03-28 14:21:44     0 sec]  CG legalizer: legalize horizontal LP...              LP压缩对全局放置结果合法化
+[INF 2023-03-28 14:21:44     0 sec]  LP legalization solver: LP optimal     
+[INF 2023-03-28 14:21:44     0 sec]  CG legalizer: legalize vertical LP...
+[INF 2023-03-28 14:21:44     0 sec]  LP legalization solver: LP optimal io pin assignment time 167 us 
+[INF 2023-03-28 14:21:44     0 sec]  CG legalizer: detailed placement horizontal LP...    LP压缩对详细布局结果合法化
+[INF 2023-03-28 14:21:44     0 sec]  LP legalization solver: LP optimal 
+[INF 2023-03-28 14:21:44     0 sec]  CG legalizer: detailed placement vertical LP...
+[INF 2023-03-28 14:21:44     0 sec]  LP legalization solver: LP optimal 
+[INF 2023-03-28 14:21:44     0 sec]  CG legalizer: detailed placement horizontal LP...
+[INF 2023-03-28 14:21:44     0 sec]  LP legalization solver: LP optimal 
+[INF 2023-03-28 14:21:44     0 sec]  CG legalizer: detailed placement vertical LP...
+[INF 2023-03-28 14:21:44     0 sec]  LP legalization solver: LP optimal 
+[INF 2023-03-28 14:21:44     0 sec]  Ideaplace: Assigning IO pin...
+ io pin assignment time 150 us 
+[INF 2023-03-28 14:21:44     0 sec]  IdeaPlaceEx:: HPWL 0 
+[INF 2023-03-28 14:21:44     0 sec]  IdeaPlaceEx:: HPWL with virtual pin: 0 
+[INF 2023-03-28 14:21:44     0 sec]  
+
+
+OVERFLOW: crf 0 
+ HPWL: path 0 
+ 
+
+[INF 2023-03-28 14:21:44     0 sec]  Ideaplace: Aligning the placement to grid...
+[INF 2023-03-28 14:21:44     0 sec]  Align to grid 200 
+[INF 2023-03-28 14:21:44     0 sec]  Alignment symaxis 21700 
+[INF 2023-03-28 14:21:44     0 sec]  Ideaplace: finished alignment
+[INF 2023-03-28 14:21:44     0 sec]  IDEAPLACE::align cell 0 INPUT_RES_xr13 center 15500 12400
+ [INF 2023-03-28 14:21:44     0 sec]  IDEAPLACE::align cell 1 INPUT_RES_xr14 center 27900 12400
+  io pin assignment time 144 us 
+placement finished:  INPUT_RES runtime 0.012198925018310547
+origin,  6900 10400
+pin shape -500 735 500 865
+layer  1
+adjust bbox  500 65 500 65
+pin shape 29100 735 30100 865
+layer  1
+adjust bbox  500 65 500 65
+pin shape -500 2735 500 2865
+layer  1
+adjust bbox  500 65 500 65
+pin shape 29100 2735 30100 2865
+layer  1
+adjust bbox  500 65 500 65
+node  INPUT_RES_xr13 3200 0
+INPUT_RES_xr13 INPUT_RES_xr13 3200 0 PLACEMENT
+node  INPUT_RES_xr14 15800 0
+INPUT_RES_xr14 INPUT_RES_xr14 15800 0 PLACEMENT
+Adding GuardRing to Cell
+origin 6900 10400
+addPowerStripe length  23750 30600
+width 31000
+width 31400
+fWidth 31.4
+width,  31.40000000000001 height 1.8 vdd offset -0.9000000000000037 5.45
+width,  31.40000000000001 height 1.8 vss offset -0.9000000000000037 -4.1
+generated vdd
+generated vss
+
+
+
+
+ add vss 
+metal  -900 -4100 30500 -2300 36
+pin shape -900 -4100 30500 -2300
+layer  6
+adjust bbox  900 4100 30500 -2300
+[INF 2023-03-28 14:21:45     2 sec]  Flow::GdsWriter:: Write circuit INPUT_RES layout to ./INPUT_RES.place.gds 
+PnR: placement finished  INPUT_RES
+
+
+PnR: working on  OTA_XT_MAGICAL
+add pin 0 to cell OTA_XT_MAGICAL_xm29
+add pin 1 to cell OTA_XT_MAGICAL_xm29
+add pin 2 to cell OTA_XT_MAGICAL_xm29
+add pin 0 to cell OTA_XT_MAGICAL_xm5
+add pin 1 to cell OTA_XT_MAGICAL_xm5
+add pin 2 to cell OTA_XT_MAGICAL_xm5
+add pin 0 to cell OTA_XT_MAGICAL_xm30
+add pin 1 to cell OTA_XT_MAGICAL_xm30
+add pin 2 to cell OTA_XT_MAGICAL_xm30
+add pin 0 to cell OTA_XT_MAGICAL_xm53
+add pin 1 to cell OTA_XT_MAGICAL_xm53
+add pin 2 to cell OTA_XT_MAGICAL_xm53
+add pin 0 to cell OTA_XT_MAGICAL_xm12
+add pin 1 to cell OTA_XT_MAGICAL_xm12
+add pin 2 to cell OTA_XT_MAGICAL_xm12
+add pin 0 to cell OTA_XT_MAGICAL_xm50
+add pin 1 to cell OTA_XT_MAGICAL_xm50
+add pin 2 to cell OTA_XT_MAGICAL_xm50
+add pin 0 to cell OTA_XT_MAGICAL_xm49
+add pin 1 to cell OTA_XT_MAGICAL_xm49
+add pin 2 to cell OTA_XT_MAGICAL_xm49
+add pin 0 to cell OTA_XT_MAGICAL_xm51
+add pin 1 to cell OTA_XT_MAGICAL_xm51
+add pin 2 to cell OTA_XT_MAGICAL_xm51
+add pin 0 to cell OTA_XT_MAGICAL_xm47
+add pin 1 to cell OTA_XT_MAGICAL_xm47
+add pin 2 to cell OTA_XT_MAGICAL_xm47
+add pin 0 to cell OTA_XT_MAGICAL_xm38
+add pin 1 to cell OTA_XT_MAGICAL_xm38
+add pin 2 to cell OTA_XT_MAGICAL_xm38
+add pin 0 to cell OTA_XT_MAGICAL_xm7
+add pin 1 to cell OTA_XT_MAGICAL_xm7
+add pin 2 to cell OTA_XT_MAGICAL_xm7
+add pin 0 to cell OTA_XT_MAGICAL_xm43
+add pin 1 to cell OTA_XT_MAGICAL_xm43
+add pin 2 to cell OTA_XT_MAGICAL_xm43
+add pin 0 to cell OTA_XT_MAGICAL_xm10
+add pin 1 to cell OTA_XT_MAGICAL_xm10
+add pin 2 to cell OTA_XT_MAGICAL_xm10
+add pin 0 to cell OTA_XT_MAGICAL_xm40
+add pin 1 to cell OTA_XT_MAGICAL_xm40
+add pin 2 to cell OTA_XT_MAGICAL_xm40
+add pin 0 to cell OTA_XT_MAGICAL_xm41
+add pin 1 to cell OTA_XT_MAGICAL_xm41
+add pin 2 to cell OTA_XT_MAGICAL_xm41
+add pin 0 to cell OTA_XT_MAGICAL_xm31
+add pin 1 to cell OTA_XT_MAGICAL_xm31
+add pin 2 to cell OTA_XT_MAGICAL_xm31
+add pin 0 to cell OTA_XT_MAGICAL_xc0
+add pin 1 to cell OTA_XT_MAGICAL_xc0
+add pin 0 to cell OTA_XT_MAGICAL_xc1
+add pin 1 to cell OTA_XT_MAGICAL_xc1
+add pin 0 to cell OTA_XT_MAGICAL_xc4
+add pin 1 to cell OTA_XT_MAGICAL_xc4
+add pin 0 to cell OTA_XT_MAGICAL_xc7
+add pin 1 to cell OTA_XT_MAGICAL_xc7
+add pin 0 to cell OTA_XT_MAGICAL_xc3
+add pin 1 to cell OTA_XT_MAGICAL_xc3
+add pin 0 to cell OTA_XT_MAGICAL_xc6
+add pin 1 to cell OTA_XT_MAGICAL_xc6
+add pin 0 to cell OTA_XT_MAGICAL_xr10
+add pin 1 to cell OTA_XT_MAGICAL_xr10
+add pin 0 to cell OTA_XT_MAGICAL_xr1
+add pin 1 to cell OTA_XT_MAGICAL_xr1
+add pin 0 to cell OTA_XT_MAGICAL_xr8
+add pin 1 to cell OTA_XT_MAGICAL_xr8
+add pin 0 to cell OTA_XT_MAGICAL_xr2
+add pin 1 to cell OTA_XT_MAGICAL_xr2
+add pin 0 to cell OTA_XT_MAGICAL_xm57
+add pin 1 to cell OTA_XT_MAGICAL_xm57
+add pin 2 to cell OTA_XT_MAGICAL_xm57
+add pin 3 to cell OTA_XT_MAGICAL_xm57
+add pin 0 to cell OTA_XT_MAGICAL_xm64
+add pin 1 to cell OTA_XT_MAGICAL_xm64
+add pin 2 to cell OTA_XT_MAGICAL_xm64
+add pin 3 to cell OTA_XT_MAGICAL_xm64
+add pin 0 to cell OTA_XT_MAGICAL_xm67
+add pin 1 to cell OTA_XT_MAGICAL_xm67
+add pin 2 to cell OTA_XT_MAGICAL_xm67
+add pin 3 to cell OTA_XT_MAGICAL_xm67
+add pin 0 to cell OTA_XT_MAGICAL_xm66
+add pin 1 to cell OTA_XT_MAGICAL_xm66
+add pin 2 to cell OTA_XT_MAGICAL_xm66
+add pin 3 to cell OTA_XT_MAGICAL_xm66
+add pin 0 to cell OTA_XT_MAGICAL_xm8
+add pin 1 to cell OTA_XT_MAGICAL_xm8
+add pin 2 to cell OTA_XT_MAGICAL_xm8
+add pin 3 to cell OTA_XT_MAGICAL_xm8
+add pin 0 to cell OTA_XT_MAGICAL_xm61
+add pin 1 to cell OTA_XT_MAGICAL_xm61
+add pin 2 to cell OTA_XT_MAGICAL_xm61
+add pin 3 to cell OTA_XT_MAGICAL_xm61
+add pin 0 to cell OTA_XT_MAGICAL_xm56
+add pin 1 to cell OTA_XT_MAGICAL_xm56
+add pin 2 to cell OTA_XT_MAGICAL_xm56
+add pin 3 to cell OTA_XT_MAGICAL_xm56
+add pin 0 to cell OTA_XT_MAGICAL_xm9
+add pin 1 to cell OTA_XT_MAGICAL_xm9
+add pin 2 to cell OTA_XT_MAGICAL_xm9
+add pin 3 to cell OTA_XT_MAGICAL_xm9
+add pin 0 to cell OTA_XT_MAGICAL_xm58
+add pin 1 to cell OTA_XT_MAGICAL_xm58
+add pin 2 to cell OTA_XT_MAGICAL_xm58
+add pin 3 to cell OTA_XT_MAGICAL_xm58
+add pin 0 to cell OTA_XT_MAGICAL_xm63
+add pin 1 to cell OTA_XT_MAGICAL_xm63
+add pin 2 to cell OTA_XT_MAGICAL_xm63
+add pin 3 to cell OTA_XT_MAGICAL_xm63
+[WRN 2023-03-28 14:21:47     3 sec]  Ideaplace: Using file parser readSymFile. This is designed for internal debugging only and may not be kept maintained 
+computeAndAddPowerCurrentFlow
+allocate signal path 0      // 分配信号路径0
+add pin to signal path 0 OTA_XT_MAGICAL_xm64 2
+add pin to signal path 0 OTA_XT_MAGICAL_xm64 0
+add pin to signal path 0 OTA_XT_MAGICAL_xm12 0
+add pin to signal path 0 OTA_XT_MAGICAL_xm12 2
+add pin to signal path 0 OTA_XT_MAGICAL_xm41 0
+add pin to signal path 0 OTA_XT_MAGICAL_xm41 2
+allocate signal path 1      // 分配信号路径1
+add pin to signal path 1 OTA_XT_MAGICAL_xm67 2
+add pin to signal path 1 OTA_XT_MAGICAL_xm67 0
+add pin to signal path 1 OTA_XT_MAGICAL_xm10 0
+add pin to signal path 1 OTA_XT_MAGICAL_xm10 2
+add pin to signal path 1 OTA_XT_MAGICAL_xm29 0
+add pin to signal path 1 OTA_XT_MAGICAL_xm29 2
+allocate signal path 2      // 分配信号路径2
+add pin to signal path 2 OTA_XT_MAGICAL_xm66 2
+add pin to signal path 2 OTA_XT_MAGICAL_xm66 0
+add pin to signal path 2 OTA_XT_MAGICAL_xm53 0
+add pin to signal path 2 OTA_XT_MAGICAL_xm53 2
+add pin to signal path 2 OTA_XT_MAGICAL_xm41 0
+add pin to signal path 2 OTA_XT_MAGICAL_xm41 2
+allocate signal path 3      // 分配信号路径3
+add pin to signal path 3 OTA_XT_MAGICAL_xm8 2
+add pin to signal path 3 OTA_XT_MAGICAL_xm8 0
+add pin to signal path 3 OTA_XT_MAGICAL_xm57 2
+add pin to signal path 3 OTA_XT_MAGICAL_xm57 0
+add pin to signal path 3 OTA_XT_MAGICAL_xm50 0
+add pin to signal path 3 OTA_XT_MAGICAL_xm50 2
+add pin to signal path 3 OTA_XT_MAGICAL_xm43 0
+add pin to signal path 3 OTA_XT_MAGICAL_xm43 2
+add pin to signal path 3 OTA_XT_MAGICAL_xm30 0
+add pin to signal path 3 OTA_XT_MAGICAL_xm30 2
+allocate signal path 4      // 分配信号路径4
+add pin to signal path 4 OTA_XT_MAGICAL_xm61 2
+add pin to signal path 4 OTA_XT_MAGICAL_xm61 0
+add pin to signal path 4 OTA_XT_MAGICAL_xm56 2
+add pin to signal path 4 OTA_XT_MAGICAL_xm56 0
+add pin to signal path 4 OTA_XT_MAGICAL_xm49 0
+add pin to signal path 4 OTA_XT_MAGICAL_xm49 2
+add pin to signal path 4 OTA_XT_MAGICAL_xm40 0
+add pin to signal path 4 OTA_XT_MAGICAL_xm40 2
+add pin to signal path 4 OTA_XT_MAGICAL_xm30 0
+add pin to signal path 4 OTA_XT_MAGICAL_xm30 2
+allocate signal path 5      // 分配信号路径5
+add pin to signal path 5 OTA_XT_MAGICAL_xm9 2
+add pin to signal path 5 OTA_XT_MAGICAL_xm9 0
+add pin to signal path 5 OTA_XT_MAGICAL_xm7 0
+add pin to signal path 5 OTA_XT_MAGICAL_xm7 2
+add pin to signal path 5 OTA_XT_MAGICAL_xm29 0
+add pin to signal path 5 OTA_XT_MAGICAL_xm29 2
+allocate signal path 6      // 分配信号路径6
+add pin to signal path 6 OTA_XT_MAGICAL_xm63 2
+add pin to signal path 6 OTA_XT_MAGICAL_xm63 0
+add pin to signal path 6 OTA_XT_MAGICAL_xm58 2
+add pin to signal path 6 OTA_XT_MAGICAL_xm58 0
+add pin to signal path 6 OTA_XT_MAGICAL_xm5 0
+add pin to signal path 6 OTA_XT_MAGICAL_xm5 2
+add pin to signal path 6 OTA_XT_MAGICAL_xm31 0
+add pin to signal path 6 OTA_XT_MAGICAL_xm31 2
+[DBG 2023-03-28 14:21:47     3 sec]  mark net gnd as vss 
+[WRN 2023-03-28 14:21:47     3 sec]  Ideaplace: Using file parser readSymNetFile. This is designed for internal debugging only and may not be kept maintained 
+[INF 2023-03-28 14:21:47     3 sec]  Symnet parser: reading ./OTA_XT_MAGICAL.symnet...
+[INF 2023-03-28 14:21:47     3 sec]  ParserSymNet:: left net vim 4
+, right net vip 5                                                         // 网络拓扑结构，左边4个引脚右边5个引脚，检查门引脚是否匹配
+[INF 2023-03-28 14:21:47     3 sec]  ParserSymNet:: left net vop 7
+, right net vom 6
+[INF 2023-03-28 14:21:47     3 sec]  ParserSymNet:: left net vo1p 17
+, right net vo1m 19
+[INF 2023-03-28 14:21:47     3 sec]  ParserSymNet:: left net casp 20
+, right net casn 18
+[INF 2023-03-28 14:21:47     3 sec]  ParserSymNet:: left net cas2p 24
+, right net cas2n 23
+[INF 2023-03-28 14:21:47     0 sec]  Ideaplace: Entering global placement...
+[INF 2023-03-28 14:21:47     0 sec]  NlpWnconj::initBoundaryParams: automatical set boundary to be Box:x = [-7.98436,7.98436];y = [-9.39336,9.39336]: 
+[DBG 2023-03-28 14:21:47     0 sec]  SigPathMgr: add cell 27 OTA_XT_MAGICAL_xm64  pin 72 0-> cell 4 OTA_XT_MAGICAL_xm12 pin 12 0 -> cell 4 OTA_XT_MAGICAL_xm12 pin 14 2 -> cell 14 OTA_XT_MAGICAL_xm41 -> pin 42  0
+[DBG 2023-03-28 14:21:47     0 sec]  SigPathMgr: add cell 28 OTA_XT_MAGICAL_xm67  pin 76 0-> cell 12 OTA_XT_MAGICAL_xm10 pin 36 0 -> cell 12 OTA_XT_MAGICAL_xm10 pin 38 2 -> cell 0 OTA_XT_MAGICAL_xm29 -> pin 0  0
+[DBG 2023-03-28 14:21:47     0 sec]  SigPathMgr: add cell 29 OTA_XT_MAGICAL_xm66  pin 80 0-> cell 3 OTA_XT_MAGICAL_xm53 pin 9 0 -> cell 3 OTA_XT_MAGICAL_xm53 pin 11 2 -> cell 14 OTA_XT_MAGICAL_xm41 -> pin 42  0
+[DBG 2023-03-28 14:21:47     0 sec]  SigPathMgr: add cell 30 OTA_XT_MAGICAL_xm8  pin 84 0-> cell 26 OTA_XT_MAGICAL_xm57 pin 70 2 -> cell 26 OTA_XT_MAGICAL_xm57 pin 68 0 -> cell 5 OTA_XT_MAGICAL_xm50 -> pin 15  0
+[DBG 2023-03-28 14:21:47     0 sec]  SigPathMgr: add cell 26 OTA_XT_MAGICAL_xm57  pin 68 0-> cell 5 OTA_XT_MAGICAL_xm50 pin 15 0 -> cell 5 OTA_XT_MAGICAL_xm50 pin 17 2 -> cell 11 OTA_XT_MAGICAL_xm43 -> pin 33  0
+[DBG 2023-03-28 14:21:47     0 sec]  SigPathMgr: add cell 5 OTA_XT_MAGICAL_xm50  pin 17 2-> cell 11 OTA_XT_MAGICAL_xm43 pin 33 0 -> cell 11 OTA_XT_MAGICAL_xm43 pin 35 2 -> cell 2 OTA_XT_MAGICAL_xm30 -> pin 6  0
+[DBG 2023-03-28 14:21:47     0 sec]  SigPathMgr: add cell 31 OTA_XT_MAGICAL_xm61  pin 88 0-> cell 32 OTA_XT_MAGICAL_xm56 pin 94 2 -> cell 32 OTA_XT_MAGICAL_xm56 pin 92 0 -> cell 6 OTA_XT_MAGICAL_xm49 -> pin 18  0
+[DBG 2023-03-28 14:21:47     0 sec]  SigPathMgr: add cell 32 OTA_XT_MAGICAL_xm56  pin 92 0-> cell 6 OTA_XT_MAGICAL_xm49 pin 18 0 -> cell 6 OTA_XT_MAGICAL_xm49 pin 20 2 -> cell 13 OTA_XT_MAGICAL_xm40 -> pin 39  0
+[DBG 2023-03-28 14:21:47     0 sec]  SigPathMgr: add cell 6 OTA_XT_MAGICAL_xm49  pin 20 2-> cell 13 OTA_XT_MAGICAL_xm40 pin 39 0 -> cell 13 OTA_XT_MAGICAL_xm40 pin 41 2 -> cell 2 OTA_XT_MAGICAL_xm30 -> pin 6  0
+[DBG 2023-03-28 14:21:47     0 sec]  SigPathMgr: add cell 33 OTA_XT_MAGICAL_xm9  pin 96 0-> cell 10 OTA_XT_MAGICAL_xm7 pin 30 0 -> cell 10 OTA_XT_MAGICAL_xm7 pin 32 2 -> cell 0 OTA_XT_MAGICAL_xm29 -> pin 0  0
+[DBG 2023-03-28 14:21:47     0 sec]  SigPathMgr: add cell 35 OTA_XT_MAGICAL_xm63  pin 104 0-> cell 34 OTA_XT_MAGICAL_xm58 pin 102 2 -> cell 34 OTA_XT_MAGICAL_xm58 pin 100 0 -> cell 1 OTA_XT_MAGICAL_xm5 -> pin 3  0
+[DBG 2023-03-28 14:21:47     0 sec]  SigPathMgr: add cell 34 OTA_XT_MAGICAL_xm58  pin 100 0-> cell 1 OTA_XT_MAGICAL_xm5 pin 3 0 -> cell 1 OTA_XT_MAGICAL_xm5 pin 5 2 -> cell 15 OTA_XT_MAGICAL_xm31 -> pin 45  0
+//***小信号流分析***//
+
+[INF 2023-03-28 14:21:47     0 sec]  Ideaplace global placement:: number of operators 682, hpwl 24 ovl 630 oob 0 asym 2 sigFlow 0 power 2 crf 
+[INF 2023-03-28 14:21:47     0 sec]  First order NLP: iter 0 
+[INF 2023-03-28 14:21:47     0 sec]  First order NLP: iter 1 
+[INF 2023-03-28 14:21:47     0 sec]  First order NLP: iter 2 
+[INF 2023-03-28 14:21:48     1 sec]  First order NLP: iter 3 
+[INF 2023-03-28 14:21:48     1 sec]  First order NLP: iter 4 
+[INF 2023-03-28 14:21:48     1 sec]  Ideaplace: Entering legalization and detailed placement...     合法化和详细布局(根据LP得到合理的紧置解)
+[INF 2023-03-28 14:21:48     1 sec]  CG legalizer: legalize horizontal LP...
+[INF 2023-03-28 14:21:48     1 sec]  LP legalization solver: LP optimal 
+[INF 2023-03-28 14:21:48     1 sec]  CG legalizer: legalize vertical LP...
+[INF 2023-03-28 14:21:48     1 sec]  LP legalization solver: LP optimal 
+ io pin assignment time 569 us 
+[INF 2023-03-28 14:21:48     1 sec]  CG legalizer: detailed placement horizontal LP...
+[INF 2023-03-28 14:21:48     1 sec]  LP legalization solver: LP optimal 
+[INF 2023-03-28 14:21:48     1 sec]  CG legalizer: detailed placement vertical LP...
+[INF 2023-03-28 14:21:48     1 sec]  LP legalization solver: LP optimal 
+[INF 2023-03-28 14:21:48     1 sec]  CG legalizer: detailed placement horizontal LP...
+[INF 2023-03-28 14:21:48     1 sec]  LP legalization solver: LP optimal 
+[INF 2023-03-28 14:21:48     1 sec]  CG legalizer: detailed placement vertical LP...
+[INF 2023-03-28 14:21:48     1 sec]  LP legalization solver: LP optimal 
+[INF 2023-03-28 14:21:48     1 sec]  Ideaplace: Assigning IO pin...
+ io pin assignment time 603 us 
+[INF 2023-03-28 14:21:48     1 sec]  IdeaPlaceEx:: HPWL 475856 
+[INF 2023-03-28 14:21:48     1 sec]  IdeaPlaceEx:: HPWL with virtual pin: 553056 
+[INF 2023-03-28 14:21:48     1 sec]  
+
+
+OVERFLOW: crf 61800 
+ HPWL: path 0 
+ 
+
+[INF 2023-03-28 14:21:48     1 sec]  Ideaplace: Aligning the placement to grid...         在网格上布局
+[INF 2023-03-28 14:21:48     1 sec]  Align to grid 200 
+[INF 2023-03-28 14:21:48     1 sec]  Alignment symaxis 28700 
+[INF 2023-03-28 14:21:48     1 sec]  Ideaplace: finished alignment
+[INF 2023-03-28 14:21:48     1 sec]  IDEAPLACE::align cell 0 OTA_XT_MAGICAL_xm29 center 28700 20400
+ [INF 2023-03-28 14:21:48     1 sec]  IDEAPLACE::align cell 1 OTA_XT_MAGICAL_xm5 center 21900 31800
+ [INF 2023-03-28 14:21:48     1 sec]  IDEAPLACE::align cell 2 OTA_XT_MAGICAL_xm30 center 28700 34700
+ [INF 2023-03-28 14:21:48     1 sec]  IDEAPLACE::align cell 3 OTA_XT_MAGICAL_xm53 center 30900 14100
+ [INF 2023-03-28 14:21:48     1 sec]  IDEAPLACE::align cell 4 OTA_XT_MAGICAL_xm12 center 26500 14100
+ [INF 2023-03-28 14:21:48     1 sec]  IDEAPLACE::align cell 5 OTA_XT_MAGICAL_xm50 center 26100 32500
+ [INF 2023-03-28 14:21:48     1 sec]  IDEAPLACE::align cell 6 OTA_XT_MAGICAL_xm49 center 31300 32500
+ [INF 2023-03-28 14:21:48     1 sec]  IDEAPLACE::align cell 7 OTA_XT_MAGICAL_xm51 center 28900 26300
+ [INF 2023-03-28 14:21:48     1 sec]  IDEAPLACE::align cell 8 OTA_XT_MAGICAL_xm47 center 22100 28600
+ [INF 2023-03-28 14:21:48     1 sec]  IDEAPLACE::align cell 9 OTA_XT_MAGICAL_xm38 center 21100 11700
+ [INF 2023-03-28 14:21:48     1 sec]  IDEAPLACE::align cell 10 OTA_XT_MAGICAL_xm7 center 22500 25500
+ [INF 2023-03-28 14:21:48     1 sec]  IDEAPLACE::align cell 11 OTA_XT_MAGICAL_xm43 center 26300 29400
+ [INF 2023-03-28 14:21:48     1 sec]  IDEAPLACE::align cell 12 OTA_XT_MAGICAL_xm10 center 34900 25500
+ [INF 2023-03-28 14:21:48     1 sec]  IDEAPLACE::align cell 13 OTA_XT_MAGICAL_xm40 center 31100 29400
+ [INF 2023-03-28 14:21:48     1 sec]  IDEAPLACE::align cell 14 OTA_XT_MAGICAL_xm41 center 28700 23800
+ [INF 2023-03-28 14:21:48     1 sec]  IDEAPLACE::align cell 15 OTA_XT_MAGICAL_xm31 center 18500 33100
+ [INF 2023-03-28 14:21:48     1 sec]  IDEAPLACE::align cell 16 OTA_XT_MAGICAL_xc0 center 32100 41400
+ [INF 2023-03-28 14:21:48     1 sec]  IDEAPLACE::align cell 17 OTA_XT_MAGICAL_xc1 center 25300 41400
+ [INF 2023-03-28 14:21:48     1 sec]  IDEAPLACE::align cell 18 OTA_XT_MAGICAL_xc4 center 21300 15600
+ [INF 2023-03-28 14:21:48     1 sec]  IDEAPLACE::align cell 19 OTA_XT_MAGICAL_xc7 center 26300 16800
+ [INF 2023-03-28 14:21:48     1 sec]  IDEAPLACE::align cell 20 OTA_XT_MAGICAL_xc3 center 36100 15600
+ [INF 2023-03-28 14:21:48     1 sec]  IDEAPLACE::align cell 21 OTA_XT_MAGICAL_xc6 center 31100 16800
+ [INF 2023-03-28 14:21:48     1 sec]  IDEAPLACE::align cell 22 OTA_XT_MAGICAL_xr10 center 22100 21000
+ [INF 2023-03-28 14:21:48     1 sec]  IDEAPLACE::align cell 23 OTA_XT_MAGICAL_xr1 center 35300 21000
+ [INF 2023-03-28 14:21:48     1 sec]  IDEAPLACE::align cell 24 OTA_XT_MAGICAL_xr8 center 39500 39700
+ [INF 2023-03-28 14:21:48     1 sec]  IDEAPLACE::align cell 25 OTA_XT_MAGICAL_xr2 center 17900 39700
+ [INF 2023-03-28 14:21:48     1 sec]  IDEAPLACE::align cell 26 OTA_XT_MAGICAL_xm57 center 31700 37800
+ [INF 2023-03-28 14:21:48     1 sec]  IDEAPLACE::align cell 27 OTA_XT_MAGICAL_xm64 center 25700 11200
+ [INF 2023-03-28 14:21:48     1 sec]  IDEAPLACE::align cell 28 OTA_XT_MAGICAL_xm67 center 42100 30200
+ [INF 2023-03-28 14:21:48     1 sec]  IDEAPLACE::align cell 29 OTA_XT_MAGICAL_xm66 center 31700 11200
+ [INF 2023-03-28 14:21:48     1 sec]  IDEAPLACE::align cell 30 OTA_XT_MAGICAL_xm8 center 31700 44700
+ [INF 2023-03-28 14:21:48     1 sec]  IDEAPLACE::align cell 31 OTA_XT_MAGICAL_xm61 center 25700 44700
+ [INF 2023-03-28 14:21:48     1 sec]  IDEAPLACE::align cell 32 OTA_XT_MAGICAL_xm56 center 25700 37800
+ [INF 2023-03-28 14:21:48     1 sec]  IDEAPLACE::align cell 33 OTA_XT_MAGICAL_xm9 center 15300 30200
+ [INF 2023-03-28 14:21:48     1 sec]  IDEAPLACE::align cell 34 OTA_XT_MAGICAL_xm58 center 38500 33900
+ [INF 2023-03-28 14:21:48     1 sec]  IDEAPLACE::align cell 35 OTA_XT_MAGICAL_xm63 center 35700 32800
+  io pin assignment time 513 us 
+placement finished:  OTA_XT_MAGICAL runtime 1.7056682109832764
+origin,  7900 10600
+pin shape 41100 22535 42100 22665
+layer  1
+adjust bbox  500 65 500 65
+pin shape -500 22535 500 22665
+layer  1
+adjust bbox  500 65 500 65
+pin shape -500 16535 500 16665
+layer  1
+adjust bbox  500 65 500 65
+pin shape 41100 16535 42100 16665
+layer  1
+adjust bbox  500 65 500 65
+pin shape 41100 18535 42100 18665
+layer  1
+adjust bbox  500 65 500 65
+pin shape -500 18535 500 18665
+layer  1
+adjust bbox  500 65 500 65
+node  OTA_XT_MAGICAL_xm29 17600 8400
+OTA_XT_MAGICAL_xm29 OTA_XT_MAGICAL_xm29 17600 8400 PLACEMENT
+node  OTA_XT_MAGICAL_xm5 12800 20600
+OTA_XT_MAGICAL_xm5 OTA_XT_MAGICAL_xm5 12800 20600 PLACEMENT
+node  OTA_XT_MAGICAL_xm30 15600 23600
+OTA_XT_MAGICAL_xm30 OTA_XT_MAGICAL_xm30 15600 23600 PLACEMENT
+node  OTA_XT_MAGICAL_xm53 21400 3000
+OTA_XT_MAGICAL_xm53 OTA_XT_MAGICAL_xm53 21400 3000 PLACEMENT
+node  OTA_XT_MAGICAL_xm12 17000 3000
+OTA_XT_MAGICAL_xm12 OTA_XT_MAGICAL_xm12 17000 3000 PLACEMENT
+node  OTA_XT_MAGICAL_xm50 16200 21400
+OTA_XT_MAGICAL_xm50 OTA_XT_MAGICAL_xm50 16200 21400 PLACEMENT
+node  OTA_XT_MAGICAL_xm49 21400 21400
+OTA_XT_MAGICAL_xm49 OTA_XT_MAGICAL_xm49 21400 21400 PLACEMENT
+node  OTA_XT_MAGICAL_xm51 19800 15200
+OTA_XT_MAGICAL_xm51 OTA_XT_MAGICAL_xm51 19800 15200 PLACEMENT
+node  OTA_XT_MAGICAL_xm47 13000 17400
+OTA_XT_MAGICAL_xm47 OTA_XT_MAGICAL_xm47 13000 17400 PLACEMENT
+node  OTA_XT_MAGICAL_xm38 12000 600
+OTA_XT_MAGICAL_xm38 OTA_XT_MAGICAL_xm38 12000 600 PLACEMENT
+node  OTA_XT_MAGICAL_xm7 11400 13600
+OTA_XT_MAGICAL_xm7 OTA_XT_MAGICAL_xm7 11400 13600 PLACEMENT
+node  OTA_XT_MAGICAL_xm43 17200 17400
+OTA_XT_MAGICAL_xm43 OTA_XT_MAGICAL_xm43 17200 17400 PLACEMENT
+node  OTA_XT_MAGICAL_xm10 23800 13600
+OTA_XT_MAGICAL_xm10 OTA_XT_MAGICAL_xm10 23800 13600 PLACEMENT
+node  OTA_XT_MAGICAL_xm40 22000 17400
+OTA_XT_MAGICAL_xm40 OTA_XT_MAGICAL_xm40 22000 17400 PLACEMENT
+node  OTA_XT_MAGICAL_xm41 18800 12400
+OTA_XT_MAGICAL_xm41 OTA_XT_MAGICAL_xm41 18800 12400 PLACEMENT
+node  OTA_XT_MAGICAL_xm31 9400 22000
+OTA_XT_MAGICAL_xm31 OTA_XT_MAGICAL_xm31 9400 22000 PLACEMENT
+node  OTA_XT_MAGICAL_xc0 22400 29600
+OTA_XT_MAGICAL_xc0 OTA_XT_MAGICAL_xc0 22400 29600 PLACEMENT
+node  OTA_XT_MAGICAL_xc1 15600 29600
+OTA_XT_MAGICAL_xc1 OTA_XT_MAGICAL_xc1 15600 29600 PLACEMENT
+node  OTA_XT_MAGICAL_xc4 10800 2600
+OTA_XT_MAGICAL_xc4 OTA_XT_MAGICAL_xc4 10800 2600 PLACEMENT
+node  OTA_XT_MAGICAL_xc7 17200 5000
+OTA_XT_MAGICAL_xc7 OTA_XT_MAGICAL_xc7 17200 5000 PLACEMENT
+node  OTA_XT_MAGICAL_xc3 25800 2600
+OTA_XT_MAGICAL_xc3 OTA_XT_MAGICAL_xc3 25800 2600 PLACEMENT
+node  OTA_XT_MAGICAL_xc6 22000 5000
+OTA_XT_MAGICAL_xc6 OTA_XT_MAGICAL_xc6 22000 5000 PLACEMENT
+node  OTA_XT_MAGICAL_xr10 12200 8600
+OTA_XT_MAGICAL_xr10 OTA_XT_MAGICAL_xr10 12200 8600 PLACEMENT
+node  OTA_XT_MAGICAL_xr1 25200 8600
+OTA_XT_MAGICAL_xr1 OTA_XT_MAGICAL_xr1 25200 8600 PLACEMENT
+node  OTA_XT_MAGICAL_xr8 27400 26000
+OTA_XT_MAGICAL_xr8 OTA_XT_MAGICAL_xr8 27400 26000 PLACEMENT
+node  OTA_XT_MAGICAL_xr2 5800 26000
+OTA_XT_MAGICAL_xr2 OTA_XT_MAGICAL_xr2 5800 26000 PLACEMENT
+node  OTA_XT_MAGICAL_xm57 21800 26200
+OTA_XT_MAGICAL_xm57 OTA_XT_MAGICAL_xm57 21800 26200 PLACEMENT
+node  OTA_XT_MAGICAL_xm64 15800 0
+OTA_XT_MAGICAL_xm64 OTA_XT_MAGICAL_xm64 15800 0 PLACEMENT
+node  OTA_XT_MAGICAL_xm67 30200 18800
+OTA_XT_MAGICAL_xm67 OTA_XT_MAGICAL_xm67 30200 18800 PLACEMENT
+node  OTA_XT_MAGICAL_xm66 21800 0
+OTA_XT_MAGICAL_xm66 OTA_XT_MAGICAL_xm66 21800 0 PLACEMENT
+node  OTA_XT_MAGICAL_xm8 21800 33400
+OTA_XT_MAGICAL_xm8 OTA_XT_MAGICAL_xm8 21800 33400 PLACEMENT
+node  OTA_XT_MAGICAL_xm61 15800 33400
+OTA_XT_MAGICAL_xm61 OTA_XT_MAGICAL_xm61 15800 33400 PLACEMENT
+node  OTA_XT_MAGICAL_xm56 15800 26200
+OTA_XT_MAGICAL_xm56 OTA_XT_MAGICAL_xm56 15800 26200 PLACEMENT
+node  OTA_XT_MAGICAL_xm9 3400 18800
+OTA_XT_MAGICAL_xm9 OTA_XT_MAGICAL_xm9 3400 18800 PLACEMENT
+node  OTA_XT_MAGICAL_xm58 29800 22400
+OTA_XT_MAGICAL_xm58 OTA_XT_MAGICAL_xm58 29800 22400 PLACEMENT
+node  OTA_XT_MAGICAL_xm63 27600 21600
+OTA_XT_MAGICAL_xm63 OTA_XT_MAGICAL_xm63 27600 21600 PLACEMENT
+Adding GuardRing to Cell
+origin 7900 10600
+addPowerStripe length  35950 42600
+width 43000
+width 43400
+fWidth 43.4
+width,  43.40000000000001 height 1.8 vdd offset -0.9000000000000046 36.575
+width,  43.40000000000001 height 1.8 vss offset -0.9000000000000046 -4.3
+generated vdd
+generated vss
+
+
+
+
+ add vss 
+metal  -900 -4300 42500 -2500 36
+pin shape -900 -4300 42500 -2500
+layer  6
+adjust bbox  900 4300 42500 -2500
+
+
+
+
+ add vdd 
+metal  -900 36575 42500 38375 36
+pin shape -900 36575 42500 38375
+layer  6
+adjust bbox  900 -36575 42500 38375
+[INF 2023-03-28 14:21:49     6 sec]  Flow::GdsWriter:: Write circuit OTA_XT_MAGICAL layout to ./OTA_XT_MAGICAL.place.gds 
+PnR: placement finished  OTA_XT_MAGICAL
+
+
+PnR: working on  COMPARATOR_schematic
+add pin 0 to cell COMPARATOR_schematic_xm0
+add pin 1 to cell COMPARATOR_schematic_xm0
+add pin 2 to cell COMPARATOR_schematic_xm0
+add pin 0 to cell COMPARATOR_schematic_xm22
+add pin 1 to cell COMPARATOR_schematic_xm22
+add pin 2 to cell COMPARATOR_schematic_xm22
+add pin 0 to cell COMPARATOR_schematic_xm16
+add pin 1 to cell COMPARATOR_schematic_xm16
+add pin 2 to cell COMPARATOR_schematic_xm16
+add pin 0 to cell COMPARATOR_schematic_xm17
+add pin 1 to cell COMPARATOR_schematic_xm17
+add pin 2 to cell COMPARATOR_schematic_xm17
+add pin 0 to cell COMPARATOR_schematic_xm4
+add pin 1 to cell COMPARATOR_schematic_xm4
+add pin 2 to cell COMPARATOR_schematic_xm4
+add pin 0 to cell COMPARATOR_schematic_xm3
+add pin 1 to cell COMPARATOR_schematic_xm3
+add pin 2 to cell COMPARATOR_schematic_xm3
+add pin 0 to cell COMPARATOR_schematic_xm7
+add pin 1 to cell COMPARATOR_schematic_xm7
+add pin 2 to cell COMPARATOR_schematic_xm7
+add pin 0 to cell COMPARATOR_schematic_xm5
+add pin 1 to cell COMPARATOR_schematic_xm5
+add pin 2 to cell COMPARATOR_schematic_xm5
+add pin 0 to cell COMPARATOR_schematic_xm6
+add pin 1 to cell COMPARATOR_schematic_xm6
+add pin 2 to cell COMPARATOR_schematic_xm6
+add pin 0 to cell COMPARATOR_schematic_xm8
+add pin 1 to cell COMPARATOR_schematic_xm8
+add pin 2 to cell COMPARATOR_schematic_xm8
+add pin 3 to cell COMPARATOR_schematic_xm8
+add pin 0 to cell COMPARATOR_schematic_xm18
+add pin 1 to cell COMPARATOR_schematic_xm18
+add pin 2 to cell COMPARATOR_schematic_xm18
+add pin 3 to cell COMPARATOR_schematic_xm18
+add pin 0 to cell COMPARATOR_schematic_xm15
+add pin 1 to cell COMPARATOR_schematic_xm15
+add pin 2 to cell COMPARATOR_schematic_xm15
+add pin 3 to cell COMPARATOR_schematic_xm15
+add pin 0 to cell COMPARATOR_schematic_xm2
+add pin 1 to cell COMPARATOR_schematic_xm2
+add pin 2 to cell COMPARATOR_schematic_xm2
+add pin 3 to cell COMPARATOR_schematic_xm2
+add pin 0 to cell COMPARATOR_schematic_xm1
+add pin 1 to cell COMPARATOR_schematic_xm1
+add pin 2 to cell COMPARATOR_schematic_xm1
+add pin 3 to cell COMPARATOR_schematic_xm1
+add pin 0 to cell COMPARATOR_schematic_xm12
+add pin 1 to cell COMPARATOR_schematic_xm12
+add pin 2 to cell COMPARATOR_schematic_xm12
+add pin 3 to cell COMPARATOR_schematic_xm12
+add pin 0 to cell COMPARATOR_schematic_xm14
+add pin 1 to cell COMPARATOR_schematic_xm14
+add pin 2 to cell COMPARATOR_schematic_xm14
+add pin 3 to cell COMPARATOR_schematic_xm14
+add pin 0 to cell COMPARATOR_schematic_xm13
+add pin 1 to cell COMPARATOR_schematic_xm13
+add pin 2 to cell COMPARATOR_schematic_xm13
+add pin 3 to cell COMPARATOR_schematic_xm13
+[WRN 2023-03-28 14:21:49     2 sec]  Ideaplace: Using file parser readSymFile. This is designed for internal debugging only and may not be kept maintained 
+computeAndAddPowerCurrentFlow
+allocate signal path 0
+add pin to signal path 0 COMPARATOR_schematic_xm8 2
+add pin to signal path 0 COMPARATOR_schematic_xm8 0
+add pin to signal path 0 COMPARATOR_schematic_xm16 0
+add pin to signal path 0 COMPARATOR_schematic_xm16 2
+allocate signal path 1
+add pin to signal path 1 COMPARATOR_schematic_xm18 2
+add pin to signal path 1 COMPARATOR_schematic_xm18 0
+add pin to signal path 1 COMPARATOR_schematic_xm5 0
+add pin to signal path 1 COMPARATOR_schematic_xm5 2
+add pin to signal path 1 COMPARATOR_schematic_xm7 0
+add pin to signal path 1 COMPARATOR_schematic_xm7 2
+allocate signal path 2
+add pin to signal path 2 COMPARATOR_schematic_xm15 2
+add pin to signal path 2 COMPARATOR_schematic_xm15 0
+add pin to signal path 2 COMPARATOR_schematic_xm17 0
+add pin to signal path 2 COMPARATOR_schematic_xm17 2
+allocate signal path 3
+add pin to signal path 3 COMPARATOR_schematic_xm2 2
+add pin to signal path 3 COMPARATOR_schematic_xm2 0
+add pin to signal path 3 COMPARATOR_schematic_xm6 0
+add pin to signal path 3 COMPARATOR_schematic_xm6 2
+add pin to signal path 3 COMPARATOR_schematic_xm7 0
+add pin to signal path 3 COMPARATOR_schematic_xm7 2
+allocate signal path 4
+add pin to signal path 4 COMPARATOR_schematic_xm1 2
+add pin to signal path 4 COMPARATOR_schematic_xm1 0
+add pin to signal path 4 COMPARATOR_schematic_xm4 0
+add pin to signal path 4 COMPARATOR_schematic_xm4 2
+add pin to signal path 4 COMPARATOR_schematic_xm5 0
+add pin to signal path 4 COMPARATOR_schematic_xm5 2
+add pin to signal path 4 COMPARATOR_schematic_xm7 0
+add pin to signal path 4 COMPARATOR_schematic_xm7 2
+allocate signal path 5
+add pin to signal path 5 COMPARATOR_schematic_xm12 2
+add pin to signal path 5 COMPARATOR_schematic_xm12 0
+add pin to signal path 5 COMPARATOR_schematic_xm3 0
+add pin to signal path 5 COMPARATOR_schematic_xm3 2
+add pin to signal path 5 COMPARATOR_schematic_xm6 0
+add pin to signal path 5 COMPARATOR_schematic_xm6 2
+add pin to signal path 5 COMPARATOR_schematic_xm7 0
+add pin to signal path 5 COMPARATOR_schematic_xm7 2
+allocate signal path 6
+add pin to signal path 6 COMPARATOR_schematic_xm14 2
+add pin to signal path 6 COMPARATOR_schematic_xm14 0
+add pin to signal path 6 COMPARATOR_schematic_xm4 0
+add pin to signal path 6 COMPARATOR_schematic_xm4 2
+add pin to signal path 6 COMPARATOR_schematic_xm5 0
+add pin to signal path 6 COMPARATOR_schematic_xm5 2
+add pin to signal path 6 COMPARATOR_schematic_xm7 0
+add pin to signal path 6 COMPARATOR_schematic_xm7 2
+allocate signal path 7
+add pin to signal path 7 COMPARATOR_schematic_xm13 2
+add pin to signal path 7 COMPARATOR_schematic_xm13 0
+add pin to signal path 7 COMPARATOR_schematic_xm3 0
+add pin to signal path 7 COMPARATOR_schematic_xm3 2
+add pin to signal path 7 COMPARATOR_schematic_xm6 0
+add pin to signal path 7 COMPARATOR_schematic_xm6 2
+add pin to signal path 7 COMPARATOR_schematic_xm7 0
+add pin to signal path 7 COMPARATOR_schematic_xm7 2
+[DBG 2023-03-28 14:21:49     2 sec]  mark net gnd as vss 
+[WRN 2023-03-28 14:21:49     2 sec]  Ideaplace: Using file parser readSymNetFile. This is designed for internal debugging only and may not be kept maintained 
+[INF 2023-03-28 14:21:49     2 sec]  Symnet parser: reading ./COMPARATOR_schematic.symnet...
+[INF 2023-03-28 14:21:49     2 sec]  ParserSymNet:: left net interp 8
+, right net intern 7
+[INF 2023-03-28 14:21:49     2 sec]  ParserSymNet:: left net _net0 5
+, right net _net1 6
+[INF 2023-03-28 14:21:49     2 sec]  ParserSymNet:: left net crossp 9
+, right net crossn 10
+[INF 2023-03-28 14:21:49     2 sec]  ParserSymNet:: left net outp 3
+, right net outm 2
+[INF 2023-03-28 14:21:49     0 sec]  Ideaplace: Entering global placement...
+[INF 2023-03-28 14:21:49     0 sec]  NlpWnconj::initBoundaryParams: automatical set boundary to be Box:x = [-7.98436,7.98436];y = [-9.39336,9.39336]: 
+[DBG 2023-03-28 14:21:49     0 sec]  SigPathMgr: add cell 10 COMPARATOR_schematic_xm18  pin 31 0-> cell 7 COMPARATOR_schematic_xm5 pin 21 0 -> cell 7 COMPARATOR_schematic_xm5 pin 23 2 -> cell 6 COMPARATOR_schematic_xm7 -> pin 18  0
+[DBG 2023-03-28 14:21:49     0 sec]  SigPathMgr: add cell 12 COMPARATOR_schematic_xm2  pin 39 0-> cell 8 COMPARATOR_schematic_xm6 pin 24 0 -> cell 8 COMPARATOR_schematic_xm6 pin 26 2 -> cell 6 COMPARATOR_schematic_xm7 -> pin 18  0
+[DBG 2023-03-28 14:21:49     0 sec]  SigPathMgr: add cell 13 COMPARATOR_schematic_xm1  pin 43 0-> cell 4 COMPARATOR_schematic_xm4 pin 12 0 -> cell 4 COMPARATOR_schematic_xm4 pin 14 2 -> cell 7 COMPARATOR_schematic_xm5 -> pin 21  0
+[DBG 2023-03-28 14:21:49     0 sec]  SigPathMgr: add cell 4 COMPARATOR_schematic_xm4  pin 14 2-> cell 7 COMPARATOR_schematic_xm5 pin 21 0 -> cell 7 COMPARATOR_schematic_xm5 pin 23 2 -> cell 6 COMPARATOR_schematic_xm7 -> pin 18  0
+[DBG 2023-03-28 14:21:49     0 sec]  SigPathMgr: add cell 14 COMPARATOR_schematic_xm12  pin 47 0-> cell 5 COMPARATOR_schematic_xm3 pin 15 0 -> cell 5 COMPARATOR_schematic_xm3 pin 17 2 -> cell 8 COMPARATOR_schematic_xm6 -> pin 24  0
+[DBG 2023-03-28 14:21:49     0 sec]  SigPathMgr: add cell 5 COMPARATOR_schematic_xm3  pin 17 2-> cell 8 COMPARATOR_schematic_xm6 pin 24 0 -> cell 8 COMPARATOR_schematic_xm6 pin 26 2 -> cell 6 COMPARATOR_schematic_xm7 -> pin 18  0
+[DBG 2023-03-28 14:21:49     0 sec]  SigPathMgr: add cell 15 COMPARATOR_schematic_xm14  pin 51 0-> cell 4 COMPARATOR_schematic_xm4 pin 12 0 -> cell 4 COMPARATOR_schematic_xm4 pin 14 2 -> cell 7 COMPARATOR_schematic_xm5 -> pin 21  0
+[DBG 2023-03-28 14:21:49     0 sec]  SigPathMgr: add cell 4 COMPARATOR_schematic_xm4  pin 14 2-> cell 7 COMPARATOR_schematic_xm5 pin 21 0 -> cell 7 COMPARATOR_schematic_xm5 pin 23 2 -> cell 6 COMPARATOR_schematic_xm7 -> pin 18  0
+[DBG 2023-03-28 14:21:49     0 sec]  SigPathMgr: add cell 16 COMPARATOR_schematic_xm13  pin 55 0-> cell 5 COMPARATOR_schematic_xm3 pin 15 0 -> cell 5 COMPARATOR_schematic_xm3 pin 17 2 -> cell 8 COMPARATOR_schematic_xm6 -> pin 24  0
+[DBG 2023-03-28 14:21:49     0 sec]  SigPathMgr: add cell 5 COMPARATOR_schematic_xm3  pin 17 2-> cell 8 COMPARATOR_schematic_xm6 pin 24 0 -> cell 8 COMPARATOR_schematic_xm6 pin 26 2 -> cell 6 COMPARATOR_schematic_xm7 -> pin 18  0
+[INF 2023-03-28 14:21:49     0 sec]  Ideaplace global placement:: number of operators 169, hpwl 10 ovl 136 oob 0 asym 1 sigFlow 0 power 2 crf 
+[INF 2023-03-28 14:21:49     0 sec]  First order NLP: iter 0 
+[INF 2023-03-28 14:21:49     0 sec]  First order NLP: iter 1 
+[INF 2023-03-28 14:21:49     0 sec]  First order NLP: iter 2 
+[INF 2023-03-28 14:21:49     0 sec]  Ideaplace: Entering legalization and detailed placement...
+[INF 2023-03-28 14:21:49     0 sec]  CG legalizer: legalize horizontal LP...
+[INF 2023-03-28 14:21:49     0 sec]  LP legalization solver: LP optimal 
+[INF 2023-03-28 14:21:49     0 sec]  CG legalizer: legalize vertical LP...
+[INF 2023-03-28 14:21:49     0 sec]  LP legalization solver: LP optimal 
+ io pin assignment time 219 us 
+[INF 2023-03-28 14:21:49     0 sec]  CG legalizer: detailed placement horizontal LP...
+[INF 2023-03-28 14:21:49     0 sec]  LP legalization solver: LP optimal 
+[INF 2023-03-28 14:21:49     0 sec]  CG legalizer: detailed placement vertical LP...
+[INF 2023-03-28 14:21:49     0 sec]  LP legalization solver: LP optimal 
+[INF 2023-03-28 14:21:49     0 sec]  CG legalizer: detailed placement horizontal LP...
+[INF 2023-03-28 14:21:49     0 sec]  LP legalization solver: LP optimal 
+[INF 2023-03-28 14:21:49     0 sec]  CG legalizer: detailed placement vertical LP...
+[INF 2023-03-28 14:21:49     0 sec]  LP legalization solver: LP optimal 
+[INF 2023-03-28 14:21:49     0 sec]  Ideaplace: Assigning IO pin...
+ io pin assignment time 205 us 
+[INF 2023-03-28 14:21:49     0 sec]  IdeaPlaceEx:: HPWL 91200 
+[INF 2023-03-28 14:21:49     0 sec]  IdeaPlaceEx:: HPWL with virtual pin: 106990 
+[INF 2023-03-28 14:21:49     0 sec]  
+
+
+OVERFLOW: crf 34000 
+ HPWL: path 0 
+ 
+
+[INF 2023-03-28 14:21:49     0 sec]  Ideaplace: Aligning the placement to grid...
+[INF 2023-03-28 14:21:49     0 sec]  Align to grid 200 
+[INF 2023-03-28 14:21:49     0 sec]  Alignment symaxis 16100 
+[INF 2023-03-28 14:21:49     0 sec]  Ideaplace: finished alignment
+[INF 2023-03-28 14:21:49     0 sec]  IDEAPLACE::align cell 0 COMPARATOR_schematic_xm0 center 21700 15000
+ [INF 2023-03-28 14:21:49     0 sec]  IDEAPLACE::align cell 1 COMPARATOR_schematic_xm22 center 10500 15000
+ [INF 2023-03-28 14:21:49     0 sec]  IDEAPLACE::align cell 2 COMPARATOR_schematic_xm16 center 20700 10500
+ [INF 2023-03-28 14:21:49     0 sec]  IDEAPLACE::align cell 3 COMPARATOR_schematic_xm17 center 11500 10500
+ [INF 2023-03-28 14:21:49     0 sec]  IDEAPLACE::align cell 4 COMPARATOR_schematic_xm4 center 19500 14900
+ [INF 2023-03-28 14:21:49     0 sec]  IDEAPLACE::align cell 5 COMPARATOR_schematic_xm3 center 12700 14900
+ [INF 2023-03-28 14:21:49     0 sec]  IDEAPLACE::align cell 6 COMPARATOR_schematic_xm7 center 16100 19100
+ [INF 2023-03-28 14:21:49     0 sec]  IDEAPLACE::align cell 7 COMPARATOR_schematic_xm5 center 17700 17000
+ [INF 2023-03-28 14:21:49     0 sec]  IDEAPLACE::align cell 8 COMPARATOR_schematic_xm6 center 14500 17000
+ [INF 2023-03-28 14:21:49     0 sec]  IDEAPLACE::align cell 9 COMPARATOR_schematic_xm8 center 20900 12700
+ [INF 2023-03-28 14:21:49     0 sec]  IDEAPLACE::align cell 10 COMPARATOR_schematic_xm18 center 20300 17300
+ [INF 2023-03-28 14:21:49     0 sec]  IDEAPLACE::align cell 11 COMPARATOR_schematic_xm15 center 11300 12700
+ [INF 2023-03-28 14:21:49     0 sec]  IDEAPLACE::align cell 12 COMPARATOR_schematic_xm2 center 11900 17300
+ [INF 2023-03-28 14:21:49     0 sec]  IDEAPLACE::align cell 13 COMPARATOR_schematic_xm1 center 14900 14500
+ [INF 2023-03-28 14:21:49     0 sec]  IDEAPLACE::align cell 14 COMPARATOR_schematic_xm12 center 17300 14500
+ [INF 2023-03-28 14:21:49     0 sec]  IDEAPLACE::align cell 15 COMPARATOR_schematic_xm14 center 14300 11900
+ [INF 2023-03-28 14:21:49     0 sec]  IDEAPLACE::align cell 16 COMPARATOR_schematic_xm13 center 17900 11900
+  io pin assignment time 202 us 
+placement finished:  COMPARATOR_schematic runtime 0.26139044761657715
+origin,  6900 9200
+pin shape 17900 9935 18900 10065
+layer  1
+adjust bbox  500 65 500 65
+pin shape 17900 -65 18900 65
+layer  1
+adjust bbox  500 65 500 65
+pin shape -500 -65 500 65
+layer  1
+adjust bbox  500 65 500 65
+pin shape -500 7935 500 8065
+layer  1
+adjust bbox  500 65 500 65
+pin shape 17900 7935 18900 8065
+layer  1
+adjust bbox  500 65 500 65
+node  COMPARATOR_schematic_xm0 14200 5200
+COMPARATOR_schematic_xm0 COMPARATOR_schematic_xm0 14200 5200 PLACEMENT
+node  COMPARATOR_schematic_xm22 3000 5200
+COMPARATOR_schematic_xm22 COMPARATOR_schematic_xm22 3000 5200 PLACEMENT
+node  COMPARATOR_schematic_xm16 13400 1000
+COMPARATOR_schematic_xm16 COMPARATOR_schematic_xm16 13400 1000 PLACEMENT
+node  COMPARATOR_schematic_xm17 4200 1000
+COMPARATOR_schematic_xm17 COMPARATOR_schematic_xm17 4200 1000 PLACEMENT
+node  COMPARATOR_schematic_xm4 12200 5400
+COMPARATOR_schematic_xm4 COMPARATOR_schematic_xm4 12200 5400 PLACEMENT
+node  COMPARATOR_schematic_xm3 5400 5400
+COMPARATOR_schematic_xm3 COMPARATOR_schematic_xm3 5400 5400 PLACEMENT
+node  COMPARATOR_schematic_xm7 8400 9600
+COMPARATOR_schematic_xm7 COMPARATOR_schematic_xm7 8400 9600 PLACEMENT
+node  COMPARATOR_schematic_xm5 10000 7200
+COMPARATOR_schematic_xm5 COMPARATOR_schematic_xm5 10000 7200 PLACEMENT
+node  COMPARATOR_schematic_xm6 6800 7200
+COMPARATOR_schematic_xm6 COMPARATOR_schematic_xm6 6800 7200 PLACEMENT
+node  COMPARATOR_schematic_xm8 13600 3200
+COMPARATOR_schematic_xm8 COMPARATOR_schematic_xm8 13600 3200 PLACEMENT
+node  COMPARATOR_schematic_xm18 13200 7800
+COMPARATOR_schematic_xm18 COMPARATOR_schematic_xm18 13200 7800 PLACEMENT
+node  COMPARATOR_schematic_xm15 4000 3200
+COMPARATOR_schematic_xm15 COMPARATOR_schematic_xm15 4000 3200 PLACEMENT
+node  COMPARATOR_schematic_xm2 4800 7800
+COMPARATOR_schematic_xm2 COMPARATOR_schematic_xm2 4800 7800 PLACEMENT
+node  COMPARATOR_schematic_xm1 7800 5000
+COMPARATOR_schematic_xm1 COMPARATOR_schematic_xm1 7800 5000 PLACEMENT
+node  COMPARATOR_schematic_xm12 10200 5000
+COMPARATOR_schematic_xm12 COMPARATOR_schematic_xm12 10200 5000 PLACEMENT
+node  COMPARATOR_schematic_xm14 6600 2400
+COMPARATOR_schematic_xm14 COMPARATOR_schematic_xm14 6600 2400 PLACEMENT
+node  COMPARATOR_schematic_xm13 10200 2400
+COMPARATOR_schematic_xm13 COMPARATOR_schematic_xm13 10200 2400 PLACEMENT
+Adding GuardRing to Cell
+origin 6900 9200
+addPowerStripe length  12750 19400
+width 19800
+width 20200
+fWidth 20.2
+width,  20.200000000000006 height 1.8 vdd offset -0.9000000000000037 11.575
+width,  20.200000000000006 height 1.8 vss offset -0.9000000000000037 -2.9
+generated vdd
+generated vss
+
+
+
+
+ add vss 
+metal  -900 -2900 19300 -1100 36
+pin shape -900 -2900 19300 -1100
+layer  6
+adjust bbox  900 2900 19300 -1100
+
+
+
+
+ add vdd 
+metal  -900 11575 19300 13375 36
+pin shape -900 11575 19300 13375
+layer  6
+adjust bbox  900 -11575 19300 13375
+[INF 2023-03-28 14:21:49     6 sec]  Flow::GdsWriter:: Write circuit COMPARATOR_schematic layout to ./COMPARATOR_schematic.place.gds 
+PnR: placement finished  COMPARATOR_schematic
+PnR: working on  RR1
+add pin i to cell xi24
+add pin z to cell xi24
+add pin vdd to cell xi24
+add pin vss to cell xi24
+add pin d to cell xi25
+add pin cp to cell xi25
+add pin q to cell xi25
+add pin qn to cell xi25
+add pin vdd to cell xi25
+add pin vss to cell xi25
+[WRN 2023-03-28 14:21:49     0 sec]  Ideaplace: Using file parser readSymFile. This is designed for internal debugging only and may not be kept maintained 
+computeAndAddPowerCurrentFlow
+[DBG 2023-03-28 14:21:49     0 sec]  mark net GND as vss 
+[WRN 2023-03-28 14:21:49     0 sec]  Ideaplace: Using file parser readSymNetFile. This is designed for internal debugging only and may not be kept maintained 
+[INF 2023-03-28 14:21:49     0 sec]  Symnet parser: reading ./RR1.symnet...
+[INF 2023-03-28 14:21:49     0 sec]  Ideaplace: Entering global placement...
+[INF 2023-03-28 14:21:49     0 sec]  NlpWnconj::initBoundaryParams: automatical set boundary to be Box:x = [-7.98436,7.98436];y = [-9.39336,9.39336]: 
+[INF 2023-03-28 14:21:49     0 sec]  Ideaplace global placement:: number of operators 9, hpwl 6 ovl 1 oob 0 asym 0 sigFlow 0 power 2 crf 
+[INF 2023-03-28 14:21:49     0 sec]  First order NLP: iter 0 
+[INF 2023-03-28 14:21:49     0 sec]  First order NLP: iter 1 
+[INF 2023-03-28 14:21:49     0 sec]  Ideaplace: Entering legalization and detailed placement...
+[INF 2023-03-28 14:21:49     0 sec]  CG legalizer: legalize horizontal LP...
+[INF 2023-03-28 14:21:49     0 sec]  LP legalization solver: LP optimal 
+[INF 2023-03-28 14:21:49     0 sec]  CG legalizer: legalize vertical LP...
+[INF 2023-03-28 14:21:49     0 sec]  LP legalization solver: LP optimal 
+ io pin assignment time 235 us 
+[INF 2023-03-28 14:21:49     0 sec]  CG legalizer: detailed placement horizontal LP...
+[INF 2023-03-28 14:21:49     0 sec]  LP legalization solver: LP optimal 
+[INF 2023-03-28 14:21:49     0 sec]  CG legalizer: detailed placement vertical LP...
+[INF 2023-03-28 14:21:49     0 sec]  LP legalization solver: LP optimal 
+[INF 2023-03-28 14:21:49     0 sec]  CG legalizer: detailed placement horizontal LP...
+[INF 2023-03-28 14:21:49     0 sec]  LP legalization solver: LP optimal 
+[INF 2023-03-28 14:21:49     0 sec]  CG legalizer: detailed placement vertical LP...
+[INF 2023-03-28 14:21:49     0 sec]  LP legalization solver: LP optimal 
+[INF 2023-03-28 14:21:49     0 sec]  Ideaplace: Assigning IO pin...
+ io pin assignment time 223 us 
+[INF 2023-03-28 14:21:49     0 sec]  IdeaPlaceEx:: HPWL 6358 
+[INF 2023-03-28 14:21:49     0 sec]  IdeaPlaceEx:: HPWL with virtual pin: 10758 
+[INF 2023-03-28 14:21:49     0 sec]  
+
+
+OVERFLOW: crf 0 
+ HPWL: path 0 
+ 
+
+[INF 2023-03-28 14:21:49     0 sec]  Ideaplace: Aligning the placement to grid...
+[INF 2023-03-28 14:21:49     0 sec]  Align to grid 200 
+[INF 2023-03-28 14:21:49     0 sec]  Alignment symaxis 13300 
+[INF 2023-03-28 14:21:49     0 sec]  Ideaplace: finished alignment
+[INF 2023-03-28 14:21:49     0 sec]  IDEAPLACE::align cell 0 xi24 center 13300 12900
+ [INF 2023-03-28 14:21:49     0 sec]  IDEAPLACE::align cell 1 xi25 center 13300 10700
+  io pin assignment time 218 us 
+placement finished:  RR1 runtime 0.009604692459106445
+origin,  7300 9200
+pin shape 11500 1935 12500 2065
+layer  1
+adjust bbox  500 65 500 65
+pin shape 11500 3935 12500 4065
+layer  1
+adjust bbox  500 65 500 65
+pin shape -500 3935 500 4065
+layer  1
+adjust bbox  500 65 500 65
+pin shape -500 1935 500 2065
+layer  1
+adjust bbox  500 65 500 65
+pin shape -500 -65 500 65
+layer  1
+adjust bbox  500 65 500 65
+pin shape 11500 -65 12500 65
+layer  1
+adjust bbox  500 65 500 65
+node  xi24 5000 3000
+xi24 xi24 5000 3000 PLACEMENT
+node  xi25 3200 800
+xi25 xi25 3200 800 PLACEMENT
+addPowerStripe length  5700 13000
+width 13400
+width 13800
+fWidth 13.8
+width,  13.80000000000001 height 0.6 vdd offset -0.7000000000000046 5.45
+width,  13.80000000000001 height 0.6 vss offset -0.7000000000000046 -1.7
+generated vdd
+generated vss
+
+
+
+
+ add vss 
+metal  -700 -1700 13100 -1100 36
+pin shape -700 -1700 13100 -1100
+layer  6
+adjust bbox  700 1700 13100 -1100
+
+
+
+
+ add vdd 
+metal  -700 5450 13100 6050 36
+pin shape -700 5450 13100 6050
+layer  6
+adjust bbox  700 -5450 13100 6050
+[INF 2023-03-28 14:21:49     6 sec]  Flow::GdsWriter:: Write circuit RR1 layout to ./RR1.place.gds 
+PnR: placement finished  RR1
+PnR: working on  RRR1
+add pin d to cell xi12
+add pin cp to cell xi12
+add pin q to cell xi12
+add pin qn to cell xi12
+add pin vdd to cell xi12
+add pin vss to cell xi12
+add pin q to cell xi6
+add pin qb to cell xi6
+add pin r to cell xi6
+add pin s to cell xi6
+add pin vdd to cell xi6
+add pin vss to cell xi6
+add pin i to cell xi4
+add pin zn to cell xi4
+add pin vdd to cell xi4
+add pin vss to cell xi4
+[WRN 2023-03-28 14:21:49     0 sec]  Ideaplace: Using file parser readSymFile. This is designed for internal debugging only and may not be kept maintained 
+computeAndAddPowerCurrentFlow
+[DBG 2023-03-28 14:21:49     0 sec]  mark net GND as vss 
+[WRN 2023-03-28 14:21:49     0 sec]  Ideaplace: Using file parser readSymNetFile. This is designed for internal debugging only and may not be kept maintained 
+[INF 2023-03-28 14:21:49     0 sec]  Symnet parser: reading ./RRR1.symnet...
+[ERR 2023-03-28 14:21:49     0 sec]  Symnet parser: symmetry net pair: net20 net28 are not inside the netlist! Ignored. 
+[INF 2023-03-28 14:21:49     0 sec]  Ideaplace: Entering global placement...
+[INF 2023-03-28 14:21:49     0 sec]  NlpWnconj::initBoundaryParams: automatical set boundary to be Box:x = [-7.98436,7.98436];y = [-9.39336,9.39336]: 
+[INF 2023-03-28 14:21:49     0 sec]  Ideaplace global placement:: number of operators 13, hpwl 8 ovl 3 oob 0 asym 0 sigFlow 0 power 2 crf 
+[INF 2023-03-28 14:21:49     0 sec]  First order NLP: iter 0 
+[INF 2023-03-28 14:21:49     0 sec]  First order NLP: iter 1 
+[INF 2023-03-28 14:21:49     0 sec]  Ideaplace: Entering legalization and detailed placement...
+[INF 2023-03-28 14:21:49     0 sec]  CG legalizer: legalize horizontal LP...
+[INF 2023-03-28 14:21:49     0 sec]  LP legalization solver: LP optimal 
+[INF 2023-03-28 14:21:49     0 sec]  CG legalizer: legalize vertical LP...
+[INF 2023-03-28 14:21:49     0 sec]  LP legalization solver: LP optimal 
+ io pin assignment time 348 us 
+[INF 2023-03-28 14:21:49     0 sec]  CG legalizer: detailed placement horizontal LP...
+[INF 2023-03-28 14:21:49     0 sec]  LP legalization solver: LP optimal 
+[INF 2023-03-28 14:21:49     0 sec]  CG legalizer: detailed placement vertical LP...
+[INF 2023-03-28 14:21:49     0 sec]  LP legalization solver: LP optimal 
+[INF 2023-03-28 14:21:49     0 sec]  CG legalizer: detailed placement horizontal LP...
+[INF 2023-03-28 14:21:49     0 sec]  LP legalization solver: LP optimal 
+[INF 2023-03-28 14:21:49     0 sec]  CG legalizer: detailed placement vertical LP...
+[INF 2023-03-28 14:21:49     0 sec]  LP legalization solver: LP optimal 
+[INF 2023-03-28 14:21:49     0 sec]  Ideaplace: Assigning IO pin...
+ io pin assignment time 312 us 
+[INF 2023-03-28 14:21:49     0 sec]  IdeaPlaceEx:: HPWL 18843 
+[INF 2023-03-28 14:21:49     0 sec]  IdeaPlaceEx:: HPWL with virtual pin: 36610 
+[INF 2023-03-28 14:21:49     0 sec]  
+
+
+OVERFLOW: crf 0 
+ HPWL: path 0 
+ 
+
+[INF 2023-03-28 14:21:49     0 sec]  Ideaplace: Aligning the placement to grid...
+[INF 2023-03-28 14:21:49     0 sec]  Align to grid 200 
+[INF 2023-03-28 14:21:49     0 sec]  Alignment symaxis 14900 
+[INF 2023-03-28 14:21:49     0 sec]  Ideaplace: finished alignment
+[INF 2023-03-28 14:21:49     0 sec]  IDEAPLACE::align cell 0 xi12 center 16300 12900
+ [INF 2023-03-28 14:21:49     0 sec]  IDEAPLACE::align cell 1 xi6 center 14300 10700
+ [INF 2023-03-28 14:21:49     0 sec]  IDEAPLACE::align cell 2 xi4 center 11300 12900
+  io pin assignment time 294 us 
+placement finished:  RRR1 runtime 0.021159887313842773
+origin,  6300 8200
+pin shape 16700 -65 17700 65
+layer  1
+adjust bbox  500 65 500 65
+pin shape -500 5935 500 6065
+layer  1
+adjust bbox  500 65 500 65
+pin shape 16700 5935 17700 6065
+layer  1
+adjust bbox  500 65 500 65
+pin shape 16700 3935 17700 4065
+layer  1
+adjust bbox  500 65 500 65
+pin shape -500 -65 500 65
+layer  1
+adjust bbox  500 65 500 65
+pin shape 16700 1935 17700 2065
+layer  1
+adjust bbox  500 65 500 65
+pin shape -500 1935 500 2065
+layer  1
+adjust bbox  500 65 500 65
+pin shape -500 3935 500 4065
+layer  1
+adjust bbox  500 65 500 65
+node  xi12 7200 4000
+xi12 xi12 7200 4000 PLACEMENT
+node  xi6 4200 1800
+xi6 xi6 4200 1800 PLACEMENT
+node  xi4 4200 4000
+xi4 xi4 4200 4000 PLACEMENT
+addPowerStripe length  8700 18200
+width 18600
+width 19000
+fWidth 19.0
+width,  19.000000000000007 height 1.8 vdd offset -0.7000000000000037 6.45
+width,  19.000000000000007 height 1.8 vss offset -0.7000000000000037 -2.9
+generated vdd
+generated vss
+
+
+
+
+ add vdd 
+metal  -700 6450 18300 8250 36
+pin shape -700 6450 18300 8250
+layer  6
+adjust bbox  700 -6450 18300 8250
+
+
+
+
+ add vss 
+metal  -700 -2900 18300 -1100 36
+pin shape -700 -2900 18300 -1100
+layer  6
+adjust bbox  700 2900 18300 -1100
+[INF 2023-03-28 14:21:50     7 sec]  Flow::GdsWriter:: Write circuit RRR1 layout to ./RRR1.place.gds 
+PnR: placement finished  RRR1
+PnR: working on  CTDSM_TOP
+add pin VINP to cell input_res
+add pin VINN to cell input_res
+add pin OTA1_INP to cell input_res
+add pin OTA1_INN to cell input_res
+add pin GND to cell input_res
+add pin 0 to cell CTDSM_TOP_xr47
+add pin 1 to cell CTDSM_TOP_xr47
+add pin 0 to cell CTDSM_TOP_xr28
+add pin 1 to cell CTDSM_TOP_xr28
+add pin 0 to cell CTDSM_TOP_xr21
+add pin 1 to cell CTDSM_TOP_xr21
+add pin 0 to cell CTDSM_TOP_xr20
+add pin 1 to cell CTDSM_TOP_xr20
+add pin 0 to cell CTDSM_TOP_xr23
+add pin 1 to cell CTDSM_TOP_xr23
+add pin 0 to cell CTDSM_TOP_xr25
+add pin 1 to cell CTDSM_TOP_xr25
+add pin 0 to cell CTDSM_TOP_xr24
+add pin 1 to cell CTDSM_TOP_xr24
+add pin 0 to cell CTDSM_TOP_xr22
+add pin 1 to cell CTDSM_TOP_xr22
+add pin 0 to cell CTDSM_TOP_xr19
+add pin 1 to cell CTDSM_TOP_xr19
+add pin 0 to cell CTDSM_TOP_xr16
+add pin 1 to cell CTDSM_TOP_xr16
+add pin 0 to cell CTDSM_TOP_xr17
+add pin 1 to cell CTDSM_TOP_xr17
+add pin 0 to cell CTDSM_TOP_xr18
+add pin 1 to cell CTDSM_TOP_xr18
+add pin 0 to cell CTDSM_TOP_xc4
+add pin 1 to cell CTDSM_TOP_xc4
+add pin 0 to cell CTDSM_TOP_xc2
+add pin 1 to cell CTDSM_TOP_xc2
+add pin 0 to cell CTDSM_TOP_xc0
+add pin 1 to cell CTDSM_TOP_xc0
+add pin 0 to cell CTDSM_TOP_xc1
+add pin 1 to cell CTDSM_TOP_xc1
+add pin gnd to cell xi22
+add pin ncas to cell xi22
+add pin vcm to cell xi22
+add pin vdd to cell xi22
+add pin vim to cell xi22
+add pin vip to cell xi22
+add pin vom to cell xi22
+add pin vop to cell xi22
+add pin gnd to cell xi20
+add pin ncas to cell xi20
+add pin vcm to cell xi20
+add pin vdd to cell xi20
+add pin vim to cell xi20
+add pin vip to cell xi20
+add pin vom to cell xi20
+add pin vop to cell xi20
+add pin clk to cell xi19
+add pin gnd to cell xi19
+add pin outm to cell xi19
+add pin outp to cell xi19
+add pin vdd to cell xi19
+add pin _net0 to cell xi19
+add pin _net1 to cell xi19
+add pin net040 to cell rr1
+add pin net010 to cell rr1
+add pin VREF to cell rr1
+add pin GND to cell rr1
+add pin net025 to cell rr1
+add pin SYS_CLKB to cell rr1
+add pin VDD to cell rr1
+add pin net035 to cell rr1
+add pin net040 to cell rr2
+add pin net010 to cell rr2
+add pin VREF to cell rr2
+add pin GND to cell rr2
+add pin net025 to cell rr2
+add pin SYS_CLKB to cell rr2
+add pin VDD to cell rr2
+add pin net035 to cell rr2
+add pin net046 to cell rrr1
+add pin SYS_CLKB to cell rrr1
+add pin VDD to cell rrr1
+add pin DO to cell rrr1
+add pin net038 to cell rrr1
+add pin GND to cell rrr1
+add pin net025 to cell rrr1
+add pin net028 to cell rrr1
+add pin net020 to cell rrr1
+add pin SYS_CLK to cell rrr1
+[WRN 2023-03-28 14:21:50     1 sec]  Ideaplace: Using file parser readSymFile. This is designed for internal debugging only and may not be kept maintained 
+[WRN 2023-03-28 14:21:50     1 sec]  Ideaplace: Using file parser readSigpathFile. This is designed for internal debugging only and may not be kept maintained 
+computeAndAddPowerCurrentFlow
+[DBG 2023-03-28 14:21:50     1 sec]  mark net GND as vss 
+[WRN 2023-03-28 14:21:50     1 sec]  Ideaplace: Using file parser readSymNetFile. This is designed for internal debugging only and may not be kept maintained 
+[INF 2023-03-28 14:21:50     1 sec]  Symnet parser: reading ./CTDSM_TOP.symnet...
+[INF 2023-03-28 14:21:50     1 sec]  ParserSymNet:: left net DO 0
+, right net net035 27
+[INF 2023-03-28 14:21:50     1 sec]  ParserSymNet:: left net VINP 8
+, right net VINN 7
+[INF 2023-03-28 14:21:50     1 sec]  ParserSymNet:: left net OTA1_INP 10
+, right net OTA1_INN 9
+[INF 2023-03-28 14:21:50     1 sec]  ParserSymNet:: left net OTA2_INP 12
+, right net OTA2_INN 11
+[INF 2023-03-28 14:21:50     1 sec]  ParserSymNet:: left net SUM_P 14
+, right net SUM_N 13
+[INF 2023-03-28 14:21:50     1 sec]  ParserSymNet:: left net VINT1P 16
+, right net VINT1N 15
+[INF 2023-03-28 14:21:50     1 sec]  ParserSymNet:: left net VINT2P 18
+, right net VINT2N 17
+[INF 2023-03-28 14:21:50     1 sec]  ParserSymNet:: left net net010 20
+, right net net012 21
+[INF 2023-03-28 14:21:50     1 sec]  ParserSymNet:: left net net038 31
+, right net net035 27
+[INF 2023-03-28 14:21:50     1 sec]  ParserSymNet:: left net net028 22
+, right net net020 23
+[INF 2023-03-28 14:21:50     0 sec]  Ideaplace: Entering global placement...
+[INF 2023-03-28 14:21:50     0 sec]  NlpWnconj::initBoundaryParams: automatical set boundary to be Box:x = [-7.98436,7.98436];y = [-9.39336,9.39336]: 
+[DBG 2023-03-28 14:21:50     0 sec]  SigPathMgr: add cell 0 input_res  pin 2 OTA1_INP-> cell 18 xi20 pin 49 vim -> cell 18 xi20 pin 52 vop -> cell 10 CTDSM_TOP_xr16 -> pin 23  0
+[DBG 2023-03-28 14:21:50     0 sec]  SigPathMgr: add cell 18 xi20  pin 52 vop-> cell 10 CTDSM_TOP_xr16 pin 23 0 -> cell 10 CTDSM_TOP_xr16 pin 24 1 -> cell 17 xi22 -> pin 41  vim
+[DBG 2023-03-28 14:21:50     0 sec]  SigPathMgr: add cell 10 CTDSM_TOP_xr16  pin 24 1-> cell 17 xi22 pin 41 vim -> cell 17 xi22 pin 44 vop -> cell 12 CTDSM_TOP_xr18 -> pin 27  0
+[DBG 2023-03-28 14:21:50     0 sec]  SigPathMgr: add cell 17 xi22  pin 44 vop-> cell 12 CTDSM_TOP_xr18 pin 27 0 -> cell 12 CTDSM_TOP_xr18 pin 28 1 -> cell 19 xi19 -> pin 58  _net0
+[DBG 2023-03-28 14:21:50     0 sec]  SigPathMgr: add cell 0 input_res  pin 3 OTA1_INN-> cell 18 xi20 pin 50 vip -> cell 18 xi20 pin 51 vom -> cell 11 CTDSM_TOP_xr17 -> pin 25  0
+[DBG 2023-03-28 14:21:50     0 sec]  SigPathMgr: add cell 18 xi20  pin 51 vom-> cell 11 CTDSM_TOP_xr17 pin 25 0 -> cell 11 CTDSM_TOP_xr17 pin 26 1 -> cell 17 xi22 -> pin 42  vip
+[DBG 2023-03-28 14:21:50     0 sec]  SigPathMgr: add cell 11 CTDSM_TOP_xr17  pin 26 1-> cell 17 xi22 pin 42 vip -> cell 17 xi22 pin 43 vom -> cell 9 CTDSM_TOP_xr19 -> pin 21  0
+[DBG 2023-03-28 14:21:50     0 sec]  SigPathMgr: add cell 17 xi22  pin 43 vom-> cell 9 CTDSM_TOP_xr19 pin 21 0 -> cell 9 CTDSM_TOP_xr19 pin 22 1 -> cell 19 xi19 -> pin 59  _net1
+[INF 2023-03-28 14:21:50     0 sec]  Ideaplace global placement:: number of operators 306, hpwl 30 ovl 253 oob 0 asym 1 sigFlow 20 power 2 crf 
+[INF 2023-03-28 14:21:50     0 sec]  First order NLP: iter 0 
+[INF 2023-03-28 14:21:50     0 sec]  First order NLP: iter 1 
+[INF 2023-03-28 14:21:50     0 sec]  First order NLP: iter 2 
+[INF 2023-03-28 14:21:50     0 sec]  First order NLP: iter 3 
+[INF 2023-03-28 14:21:50     0 sec]  Ideaplace: Entering legalization and detailed placement...
+[INF 2023-03-28 14:21:50     0 sec]  CG legalizer: legalize horizontal LP...
+[INF 2023-03-28 14:21:50     0 sec]  LP legalization solver: LP optimal 
+[INF 2023-03-28 14:21:50     0 sec]  CG legalizer: legalize vertical LP...
+[INF 2023-03-28 14:21:50     0 sec]  LP legalization solver: LP optimal 
+[INF 2023-03-28 14:21:50     0 sec]  CG legalizer: detailed placement horizontal LP...
+[INF 2023-03-28 14:21:50     0 sec]  LP legalization solver: LP optimal 
+[INF 2023-03-28 14:21:50     0 sec]  CG legalizer: detailed placement vertical LP...
+[INF 2023-03-28 14:21:50     0 sec]  LP legalization solver: LP optimal 
+[INF 2023-03-28 14:21:50     0 sec]  CG legalizer: detailed placement horizontal LP...
+[INF 2023-03-28 14:21:50     0 sec]  LP legalization solver: LP optimal 
+[INF 2023-03-28 14:21:50     0 sec]  CG legalizer: detailed placement vertical LP...
+[INF 2023-03-28 14:21:50     0 sec]  LP legalization solver: LP optimal 
+[INF 2023-03-28 14:21:50     0 sec]  Ideaplace: Assigning IO pin...
+[INF 2023-03-28 14:21:50     0 sec]  IdeaPlaceEx:: HPWL 2011402 
+[INF 2023-03-28 14:21:50     0 sec]  IdeaPlaceEx:: HPWL with virtual pin: 2011402 
+[INF 2023-03-28 14:21:50     0 sec]  
+
+
+OVERFLOW: crf 0 
+ HPWL: path 555600 
+ 
+
+[INF 2023-03-28 14:21:50     0 sec]  Ideaplace: Aligning the placement to grid...
+[INF 2023-03-28 14:21:50     0 sec]  Align to grid 200 
+[INF 2023-03-28 14:21:50     0 sec]  Alignment symaxis 69500 
+[INF 2023-03-28 14:21:50     0 sec]  Ideaplace: finished alignment
+[INF 2023-03-28 14:21:50     0 sec]  IDEAPLACE::align cell 0 input_res center 69500 14800
+ [INF 2023-03-28 14:21:50     0 sec]  IDEAPLACE::align cell 1 CTDSM_TOP_xr47 center 110900 48400
+ [INF 2023-03-28 14:21:50     0 sec]  IDEAPLACE::align cell 2 CTDSM_TOP_xr28 center 28100 48400
+ [INF 2023-03-28 14:21:50     0 sec]  IDEAPLACE::align cell 3 CTDSM_TOP_xr21 center 60300 139400
+ [INF 2023-03-28 14:21:50     0 sec]  IDEAPLACE::align cell 4 CTDSM_TOP_xr20 center 78700 139400
+ [INF 2023-03-28 14:21:50     0 sec]  IDEAPLACE::align cell 5 CTDSM_TOP_xr23 center 109500 27900
+ [INF 2023-03-28 14:21:50     0 sec]  IDEAPLACE::align cell 6 CTDSM_TOP_xr25 center 98500 108000
+ [INF 2023-03-28 14:21:50     0 sec]  IDEAPLACE::align cell 7 CTDSM_TOP_xr24 center 40500 108000
+ [INF 2023-03-28 14:21:50     0 sec]  IDEAPLACE::align cell 8 CTDSM_TOP_xr22 center 29500 27900
+ [INF 2023-03-28 14:21:50     0 sec]  IDEAPLACE::align cell 9 CTDSM_TOP_xr19 center 98500 116100
+ [INF 2023-03-28 14:21:50     0 sec]  IDEAPLACE::align cell 10 CTDSM_TOP_xr16 center 43700 80600
+ [INF 2023-03-28 14:21:50     0 sec]  IDEAPLACE::align cell 11 CTDSM_TOP_xr17 center 95300 80600
+ [INF 2023-03-28 14:21:50     0 sec]  IDEAPLACE::align cell 12 CTDSM_TOP_xr18 center 40500 116100
+ [INF 2023-03-28 14:21:50     0 sec]  IDEAPLACE::align cell 13 CTDSM_TOP_xc4 center 48700 70900
+ [INF 2023-03-28 14:21:50     0 sec]  IDEAPLACE::align cell 14 CTDSM_TOP_xc2 center 41100 27200
+ [INF 2023-03-28 14:21:50     0 sec]  IDEAPLACE::align cell 15 CTDSM_TOP_xc0 center 90300 70900
+ [INF 2023-03-28 14:21:50     0 sec]  IDEAPLACE::align cell 16 CTDSM_TOP_xc1 center 97900 27200
+ [INF 2023-03-28 14:21:50     0 sec]  IDEAPLACE::align cell 17 xi22 center 69500 114600
+ [INF 2023-03-28 14:21:50     0 sec]  IDEAPLACE::align cell 18 xi20 center 69500 42000
+ [INF 2023-03-28 14:21:50     0 sec]  IDEAPLACE::align cell 19 xi19 center 69500 151000
+ [INF 2023-03-28 14:21:50     0 sec]  IDEAPLACE::align cell 20 rr1 center 50700 88000
+ [INF 2023-03-28 14:21:50     0 sec]  IDEAPLACE::align cell 21 rr2 center 88300 88000
+ [INF 2023-03-28 14:21:50     0 sec]  IDEAPLACE::align cell 22 rrr1 center 69500 86300
+ placement finished:  CTDSM_TOP runtime 0.30850815773010254
+origin,  10500 14400
+node  input_res 44200 0
+input_res input_res 44200 0 PLACEMENT
+node  CTDSM_TOP_xr47 82600 19200
+CTDSM_TOP_xr47 CTDSM_TOP_xr47 82600 19200 PLACEMENT
+node  CTDSM_TOP_xr28 0 19200
+CTDSM_TOP_xr28 CTDSM_TOP_xr28 0 19200 PLACEMENT
+node  CTDSM_TOP_xr21 44400 123000
+CTDSM_TOP_xr21 CTDSM_TOP_xr21 44400 123000 PLACEMENT
+node  CTDSM_TOP_xr20 63000 123000
+CTDSM_TOP_xr20 CTDSM_TOP_xr20 63000 123000 PLACEMENT
+node  CTDSM_TOP_xr23 93600 9400
+CTDSM_TOP_xr23 CTDSM_TOP_xr23 93600 9400 PLACEMENT
+node  CTDSM_TOP_xr25 82600 87400
+CTDSM_TOP_xr25 CTDSM_TOP_xr25 82600 87400 PLACEMENT
+node  CTDSM_TOP_xr24 24800 87400
+CTDSM_TOP_xr24 CTDSM_TOP_xr24 24800 87400 PLACEMENT
+node  CTDSM_TOP_xr22 13800 9400
+CTDSM_TOP_xr22 CTDSM_TOP_xr22 13800 9400 PLACEMENT
+node  CTDSM_TOP_xr19 82600 101400
+CTDSM_TOP_xr19 CTDSM_TOP_xr19 82600 101400 PLACEMENT
+node  CTDSM_TOP_xr16 27800 64200
+CTDSM_TOP_xr16 CTDSM_TOP_xr16 27800 64200 PLACEMENT
+node  CTDSM_TOP_xr17 79600 64200
+CTDSM_TOP_xr17 CTDSM_TOP_xr17 79600 64200 PLACEMENT
+node  CTDSM_TOP_xr18 24800 101400
+CTDSM_TOP_xr18 CTDSM_TOP_xr18 24800 101400 PLACEMENT
+node  CTDSM_TOP_xc4 31600 50000
+CTDSM_TOP_xc4 CTDSM_TOP_xc4 31600 50000 PLACEMENT
+node  CTDSM_TOP_xc2 25600 7600
+CTDSM_TOP_xc2 CTDSM_TOP_xc2 25600 7600 PLACEMENT
+node  CTDSM_TOP_xc0 73000 50000
+CTDSM_TOP_xc0 CTDSM_TOP_xc0 73000 50000 PLACEMENT
+node  CTDSM_TOP_xc1 82600 7600
+CTDSM_TOP_xc1 CTDSM_TOP_xc1 82600 7600 PLACEMENT
+node  xi22 38200 83200
+xi22 xi22 38200 83200 PLACEMENT
+node  xi20 38200 10600
+xi20 xi20 38200 10600 PLACEMENT
+node  xi19 49800 131400
+xi19 xi19 49800 131400 PLACEMENT
+node  rr1 34000 71400
+rr1 rr1 34000 71400 PLACEMENT
+node  rr2 71600 71400
+rr2 rr2 71600 71400 PLACEMENT
+node  rrr1 50200 69200
+rrr1 rrr1 50200 69200 PLACEMENT
+Adding GuardRing to Cell
+origin 10500 14400
+addPowerStripe length  118550 119450
+width 119850
+width 120200
+fWidth 120.2
+width,  120.6 height 1.8 vdd offset -1.2999999999999965 145.775
+width,  120.6 height 1.8 vss offset -1.2999999999999965 -7.5
+generated vdd
+generated vss
+
+
+
+
+ add vss 
+metal  -1300 -7500 119300 -5700 36
+pin shape -1300 -7500 119300 -5700
+layer  6
+adjust bbox  1300 7500 119300 -5700
+
+
+
+
+ add vdd 
+metal  -1300 145775 119300 147575 36
+pin shape -1300 145775 119300 147575
+layer  6
+adjust bbox  1300 -145775 119300 147575
+[INF 2023-03-28 14:21:51     8 sec]  Flow::GdsWriter:: Write circuit CTDSM_TOP layout to ./CTDSM_TOP.place.gds 
+PnR: placement finished  CTDSM_TOP
+runtime  6.677850008010864
+[INF 2023-03-28 14:21:51     8 sec]  Flow::GdsWriter:: Write circuit INPUT_RES layout to ./INPUT_RES.place.gds 
+runtime,  0.012198925018310547
+Parsing LEF file ../mockPDK/mock.lef
+Parsing Tech file ../mockPDK/mock.techfile
+Parsing placement GDS layout file ./INPUT_RES.place.gds
+
+
+AcsMgr::computeAcs Start Access Points Generation
+addPin 0 False 0
+addShape2Pin 0 0 6300 -100 6500 1300
+addPin 1 False 0
+addShape2Pin 1 0 -1000 1470 1000 1730
+addPin 2 False 0
+addShape2Pin 2 0 31500 6700 31700 8100
+addPin 3 False 0
+addShape2Pin 3 0 58200 1470 60200 1730
+addPin 4 False 0
+addShape2Pin 4 0 27500 6700 27700 8100
+addPin 5 False 0
+addShape2Pin 5 0 -1000 5470 1000 5730
+addPin 6 False 0
+addShape2Pin 6 0 52700 -100 52900 1300
+addPin 7 False 0
+addShape2Pin 7 0 58200 5470 60200 5730
+addPin 8 True 1
+addShape2Pin 8 5 -1800 -8200 61000 -4600
+addPin sub 9 True False
+addShape2Pin psub shape 5 5100 -2100 54100 -1900
+setwidth INPUT_RES VINP 0.1
+setvia 2 1 2
+addNet netname VINP width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  0 0
+addPin2Net  1 0
+setwidth INPUT_RES VINN 0.1
+setvia 2 1 2
+addNet netname VINN width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  2 1
+addPin2Net  3 1
+setwidth INPUT_RES OTA1_INP 0.1
+setvia 2 1 2
+addNet netname OTA1_INP width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  4 2
+addPin2Net  5 2
+setwidth INPUT_RES OTA1_INN 0.1
+setvia 2 1 2
+addNet netname OTA1_INN width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  6 3
+addPin2Net  7 3
+setwidth INPUT_RES GND 0.5
+setvia 4 2 2
+addNet netname GND width 1000 cuts 4 isPower True rows 2 cols 2
+addPin2Net  8 4
+addPin2Net pubs ver 9 4
+routing grid off set 0 -6400
+
+
+AcsMgr::computeAcs Start Access Points Generation
+
+DrMgr::solve Start Detailed Routing
+DrSymmetry::solve Start max symmetric detection
+DrSymmetry::solve Sym:      VINP VINN
+DrSymmetry::solve Sym:      OTA1_INP OTA1_INN
+DrSymmetry::solve Self-sym: GND
+
+DrGridRoute::runNRR	Iteration 0 Unrouted nets 1, GND
+DrGridAstar::run	Route net GND, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridRoute::solveDR Solved!!!!
+
+DrGridRoute::runNRR	Iteration 0 Unrouted nets 4, OTA1_INN OTA1_INP VINN VINP
+DrGridAstar::run	Route net VINP, Sym: 1, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net VINP, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net OTA1_INN, Sym: 1, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net OTA1_INN, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net OTA1_INP, Sym: 1, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net OTA1_INP, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net VINN, Sym: 1, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net VINN, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridRoute::solveDR Solved!!!!
+Net VINP, wl: 6000, #via: 2, area: 2105600.00, degSym: 0.00
+Net VINN, wl: 32000, #via: 2, area: 7272000.00, degSym: 0.00
+Net OTA1_INP, wl: 28000, #via: 2, area: 6392000.00, degSym: 0.00
+Net OTA1_INN, wl: 10000, #via: 2, area: 2905600.00, degSym: 0.00
+Net GND, wl: 2800, #via: 0, area: 3800000.00, degSym: 0.00
+---------- Anaroute             total  time usage -----------
+Real: 0.015679s; User: 0.015679s; System: 0.000000s
+
+Total wl: 78800, Total #via: 8, Total Sym wl: 0, Total degSym: 0.0001, Avg degSym: 0.0001
+
+Writing Routing GDS Layout ./INPUT_RES.route.gds
+Writing Dumb File ./INPUT_RES.ioPin
+PnR: routing finished  INPUT_RES
+[INF 2023-03-28 14:21:51     8 sec]  Flow::GdsWriter:: Write circuit OTA_XT_MAGICAL layout to ./OTA_XT_MAGICAL.place.gds 
+runtime,  1.7056682109832764
+Parsing LEF file ../mockPDK/mock.lef
+Parsing Tech file ../mockPDK/mock.techfile
+Parsing placement GDS layout file ./OTA_XT_MAGICAL.place.gds
+
+
+AcsMgr::computeAcs Start Access Points Generation
+addPin 0 True 0
+addShape2Pin 0 5 35100 22300 48100 22500
+addPin 1 True 0
+addShape2Pin 1 5 31100 49100 52100 49300
+addPin 2 True 0
+addShape2Pin 2 5 23900 3100 28900 3300
+addPin 3 True 0
+addShape2Pin 3 5 37500 27900 45700 28100
+addPin 4 True 0
+addShape2Pin 4 5 18700 45900 23700 46100
+addPin 5 True 1
+addShape2Pin 5 5 -1800 -8600 85000 -5000
+addPin sub 6 True False
+addShape2Pin psub shape 5 4700 -2500 78500 -2300
+addPin 7 False 0
+addShape2Pin 7 0 32300 45100 40500 45300
+addPin 8 False 0
+addShape2Pin 8 0 42700 45100 50900 45300
+addPin 9 False 0
+addShape2Pin 9 0 39500 32700 44500 32900
+addPin 10 False 0
+addShape2Pin 10 0 82200 45070 84200 45330
+addPin 11 False 0
+addShape2Pin 11 0 25500 43900 30500 44100
+addPin 12 False 0
+addShape2Pin 12 0 33900 8300 40500 8500
+addPin 13 False 0
+addShape2Pin 13 0 25900 37500 30900 37700
+addPin 14 False 0
+addShape2Pin 14 0 -1000 45070 1000 45330
+addPin 15 True 0
+addShape2Pin 15 5 42700 51100 52500 51300
+addPin 16 True 0
+addShape2Pin 16 5 30700 -1300 40500 -1100
+addPin 17 True 0
+addShape2Pin 17 5 59500 36300 77300 36500
+addPin 18 True 0
+addShape2Pin 18 5 42700 -1300 52500 -1100
+addPin 19 True 0
+addShape2Pin 19 5 42700 65500 52500 65700
+addPin 20 True 0
+addShape2Pin 20 5 30700 65500 40500 65700
+addPin 21 True 0
+addShape2Pin 21 5 30700 51100 40500 51300
+addPin 22 True 0
+addShape2Pin 22 5 5900 36300 23700 36500
+addPin 23 True 0
+addShape2Pin 23 5 58700 43500 63700 43700
+addPin 24 True 0
+addShape2Pin 24 5 54300 42300 56900 42500
+addPin 25 True 1
+addShape2Pin 25 5 -1800 73150 85000 76750
+addPin 26 False 0
+addShape2Pin 26 0 22700 32700 35700 32900
+addPin 27 False 0
+addShape2Pin 27 0 34300 40700 39300 40900
+addPin 28 False 0
+addShape2Pin 28 0 -1000 33070 1000 33330
+addPin 29 False 0
+addShape2Pin 29 0 47500 32700 60500 32900
+addPin 30 False 0
+addShape2Pin 30 0 43900 40700 48900 40900
+addPin 31 False 0
+addShape2Pin 31 0 82200 33070 84200 33330
+addPin 32 False 0
+addShape2Pin 32 0 48300 26700 59700 26900
+addPin 33 False 0
+addShape2Pin 33 1 51500 14450 61700 14900
+addPin 34 False 0
+addShape2Pin 34 1 43900 14590 48900 14900
+addPin 35 False 0
+addShape2Pin 35 0 32700 17100 32900 18100
+addPin 36 False 0
+addShape2Pin 36 0 61100 37100 75700 37300
+addPin 37 False 0
+addShape2Pin 37 0 82200 37070 84200 37330
+addPin 38 False 0
+addShape2Pin 38 0 23500 26700 34900 26900
+addPin 39 False 0
+addShape2Pin 39 1 21500 14450 31700 14900
+addPin 40 False 0
+addShape2Pin 40 1 34300 14590 39300 14900
+addPin 41 False 0
+addShape2Pin 41 0 50300 23500 50500 24500
+addPin 42 False 0
+addShape2Pin 42 0 7500 37100 22100 37300
+addPin 43 False 0
+addShape2Pin 43 0 -1000 37070 1000 37330
+addPin 44 False 0
+addShape2Pin 44 0 35900 16300 47300 16500
+addPin 45 False 0
+addShape2Pin 45 0 22700 32300 35700 32500
+addPin 46 False 0
+addShape2Pin 46 0 47500 32300 60500 32500
+addPin 47 False 0
+addShape2Pin 47 0 35100 22700 48100 22900
+addPin 48 False 0
+addShape2Pin 48 0 34700 5500 39700 5700
+addPin 49 False 0
+addShape2Pin 49 1 21500 5100 31700 5550
+addPin 50 False 0
+addShape2Pin 50 1 51500 5100 61700 5550
+addPin 51 False 0
+addShape2Pin 51 0 32300 -500 38900 -300
+addPin 52 False 0
+addShape2Pin 52 0 26300 40700 29700 40900
+addPin 53 False 0
+addShape2Pin 53 0 43500 56700 51700 56900
+addPin 54 False 0
+addShape2Pin 54 0 31500 56700 39700 56900
+addPin 55 False 0
+addShape2Pin 55 0 59500 48700 62900 48900
+addPin 56 False 0
+addShape2Pin 56 0 55100 45500 56100 45700
+addPin 57 False 0
+addShape2Pin 57 0 25500 43500 30500 43700
+addPin 58 False 0
+addShape2Pin 58 0 19500 43500 22900 43700
+addPin 59 False 0
+addShape2Pin 59 0 31900 46700 51300 46900
+addPin 60 False 0
+addShape2Pin 60 0 34300 40300 39300 40500
+addPin 61 False 0
+addShape2Pin 61 0 43900 40300 48900 40500
+addPin 62 False 0
+addShape2Pin 62 0 31100 49500 52100 49700
+addPin 63 False 0
+addShape2Pin 63 0 40300 29900 43700 30100
+addPin 64 False 0
+addShape2Pin 64 0 26700 34300 30100 34500
+addPin 65 False 0
+addShape2Pin 65 0 23900 3500 28900 3700
+addPin 66 False 0
+addShape2Pin 66 0 37500 28300 45700 28500
+addPin 67 False 0
+addShape2Pin 67 0 18700 46300 23700 46500
+addPin 68 False 0
+addShape2Pin 68 0 43500 5500 48500 5700
+addPin 69 False 0
+addShape2Pin 69 0 31500 2700 39700 2900
+addPin 70 False 0
+addShape2Pin 70 0 43500 2700 51700 2900
+addPin 71 False 0
+addShape2Pin 71 0 42700 8300 49300 8500
+addPin 72 False 0
+addShape2Pin 72 1 34300 9900 39300 10210
+addPin 73 False 0
+addShape2Pin 73 1 43900 9900 48900 10210
+addPin 74 False 0
+addShape2Pin 74 0 32700 23500 32900 24500
+addPin 75 False 0
+addShape2Pin 75 0 50300 17100 50500 18100
+addPin 76 False 0
+addShape2Pin 76 0 42700 7900 49300 8100
+addPin 77 False 0
+addShape2Pin 77 0 33900 7900 40500 8100
+addPin 78 False 0
+addShape2Pin 78 0 38300 24300 44900 24500
+addPin 79 False 0
+addShape2Pin 79 0 33100 42300 39700 42500
+addPin 80 False 0
+addShape2Pin 80 1 44700 59100 52100 59420
+addPin 81 False 0
+addShape2Pin 81 0 28300 51900 28500 52900
+addPin 82 False 0
+addShape2Pin 82 0 44300 51900 50900 52100
+addPin 83 False 0
+addShape2Pin 83 0 60300 41100 76500 41300
+addPin 84 False 0
+addShape2Pin 84 0 32300 44700 40500 44900
+addPin 85 False 0
+addShape2Pin 85 0 35100 34300 38500 34500
+addPin 86 False 0
+addShape2Pin 86 0 43500 42300 50100 42500
+addPin 87 False 0
+addShape2Pin 87 1 31100 59100 38500 59420
+addPin 88 False 0
+addShape2Pin 88 0 54700 63500 54900 64500
+addPin 89 False 0
+addShape2Pin 89 0 32300 51900 38900 52100
+addPin 90 False 0
+addShape2Pin 90 0 6700 41100 22900 41300
+addPin 91 False 0
+addShape2Pin 91 0 42700 44700 50900 44900
+addPin 92 False 0
+addShape2Pin 92 0 44700 34300 48100 34500
+addPin 93 False 0
+addShape2Pin 93 0 25900 37100 30900 37300
+addPin 94 False 0
+addShape2Pin 94 0 24700 700 28100 900
+addPin 95 False 0
+addShape2Pin 95 1 44700 63780 52100 64100
+addPin 96 False 0
+addShape2Pin 96 1 31100 63780 38500 64100
+addPin 97 False 0
+addShape2Pin 97 0 54700 51900 54900 52900
+addPin 98 False 0
+addShape2Pin 98 0 28300 63500 28500 64500
+addPin 99 False 0
+addShape2Pin 99 0 43500 69900 51700 70100
+addPin 100 False 0
+addShape2Pin 100 0 31500 69900 39700 70100
+addPin 101 False 0
+addShape2Pin 101 0 43500 56300 51700 56500
+addPin 102 False 0
+addShape2Pin 102 0 44300 66300 50900 66500
+addPin 103 False 0
+addShape2Pin 103 0 32300 66300 38900 66500
+addPin 104 False 0
+addShape2Pin 104 0 31500 56300 39700 56500
+addPin 105 False 0
+addShape2Pin 105 0 60300 44300 62100 44500
+addPin 106 False 0
+addShape2Pin 106 0 55900 43100 56100 45300
+setwidth OTA_XT_MAGICAL gnd 0.5
+setvia 4 2 2
+addNet netname gnd width 1000 cuts 4 isPower True rows 2 cols 2
+addPin2Net  0 0
+addPin2Net  1 0
+addPin2Net  2 0
+addPin2Net  3 0
+addPin2Net  4 0
+addPin2Net  5 0
+addPin2Net pubs ver 6 0
+setwidth OTA_XT_MAGICAL ncas 0.1
+setvia 2 1 2
+addNet netname ncas width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  7 1
+addPin2Net  8 1
+addPin2Net  9 1
+addPin2Net  10 1
+setwidth OTA_XT_MAGICAL vcm 0.1
+setvia 2 1 2
+addNet netname vcm width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  11 2
+addPin2Net  12 2
+addPin2Net  13 2
+addPin2Net  14 2
+setwidth OTA_XT_MAGICAL vdd 0.5
+setvia 4 2 2
+addNet netname vdd width 1000 cuts 4 isPower True rows 2 cols 2
+addPin2Net  15 3
+addPin2Net  16 3
+addPin2Net  17 3
+addPin2Net  18 3
+addPin2Net  19 3
+addPin2Net  20 3
+addPin2Net  21 3
+addPin2Net  22 3
+addPin2Net  23 3
+addPin2Net  24 3
+addPin2Net  25 3
+setwidth OTA_XT_MAGICAL vim 0.1
+setvia 2 1 2
+addNet netname vim width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  26 4
+addPin2Net  27 4
+addPin2Net  28 4
+setwidth OTA_XT_MAGICAL vip 0.1
+setvia 2 1 2
+addNet netname vip width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  29 5
+addPin2Net  30 5
+addPin2Net  31 5
+setwidth OTA_XT_MAGICAL vom 0.1
+setvia 2 1 2
+addNet netname vom width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  32 6
+addPin2Net  33 6
+addPin2Net  34 6
+addPin2Net  35 6
+addPin2Net  36 6
+addPin2Net  37 6
+setwidth OTA_XT_MAGICAL vop 0.1
+setvia 2 1 2
+addNet netname vop width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  38 7
+addPin2Net  39 7
+addPin2Net  40 7
+addPin2Net  41 7
+addPin2Net  42 7
+addPin2Net  43 7
+setwidth OTA_XT_MAGICAL vs 0.1
+setvia 2 1 2
+addNet netname vs width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  44 8
+addPin2Net  45 8
+addPin2Net  46 8
+setwidth OTA_XT_MAGICAL vcmon 0.1
+setvia 2 1 2
+addNet netname vcmon width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  47 9
+addPin2Net  48 9
+addPin2Net  49 9
+addPin2Net  50 9
+addPin2Net  51 9
+setwidth OTA_XT_MAGICAL pcas 0.1
+setvia 2 1 2
+addNet netname pcas width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  52 10
+addPin2Net  53 10
+addPin2Net  54 10
+addPin2Net  55 10
+addPin2Net  56 10
+setwidth OTA_XT_MAGICAL bias2 0.1
+setvia 2 1 2
+addNet netname bias2 width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  57 11
+addPin2Net  58 11
+setwidth OTA_XT_MAGICAL tail1 0.1
+setvia 2 1 2
+addNet netname tail1 width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  59 12
+addPin2Net  60 12
+addPin2Net  61 12
+setwidth OTA_XT_MAGICAL nbias_tail 0.1
+setvia 2 1 2
+addNet netname nbias_tail width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  62 13
+addPin2Net  63 13
+addPin2Net  64 13
+addPin2Net  65 13
+addPin2Net  66 13
+addPin2Net  67 13
+setwidth OTA_XT_MAGICAL vcmop 0.1
+setvia 2 1 2
+addNet netname vcmop width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  68 14
+addPin2Net  69 14
+addPin2Net  70 14
+setwidth OTA_XT_MAGICAL net0108 0.1
+setvia 2 1 2
+addNet netname net0108 width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  71 15
+addPin2Net  72 15
+addPin2Net  73 15
+addPin2Net  74 15
+addPin2Net  75 15
+setwidth OTA_XT_MAGICAL vs2 0.1
+setvia 2 1 2
+addNet netname vs2 width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  76 16
+addPin2Net  77 16
+addPin2Net  78 16
+setwidth OTA_XT_MAGICAL vo1p 0.1
+setvia 2 1 2
+addNet netname vo1p width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  79 17
+addPin2Net  80 17
+addPin2Net  81 17
+addPin2Net  82 17
+addPin2Net  83 17
+setwidth OTA_XT_MAGICAL casn 0.1
+setvia 2 1 2
+addNet netname casn width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  84 18
+addPin2Net  85 18
+setwidth OTA_XT_MAGICAL vo1m 0.1
+setvia 2 1 2
+addNet netname vo1m width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  86 19
+addPin2Net  87 19
+addPin2Net  88 19
+addPin2Net  89 19
+addPin2Net  90 19
+setwidth OTA_XT_MAGICAL casp 0.1
+setvia 2 1 2
+addNet netname casp width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  91 20
+addPin2Net  92 20
+setwidth OTA_XT_MAGICAL bias1 0.1
+setvia 2 1 2
+addNet netname bias1 width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  93 21
+addPin2Net  94 21
+setwidth OTA_XT_MAGICAL net096 0.1
+setvia 2 1 2
+addNet netname net096 width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  95 22
+addPin2Net  96 22
+addPin2Net  97 22
+addPin2Net  98 22
+addPin2Net  99 22
+addPin2Net  100 22
+setwidth OTA_XT_MAGICAL cas2n 0.1
+setvia 2 1 2
+addNet netname cas2n width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  101 23
+addPin2Net  102 23
+setwidth OTA_XT_MAGICAL cas2p 0.1
+setvia 2 1 2
+addNet netname cas2p width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  103 24
+addPin2Net  104 24
+setwidth OTA_XT_MAGICAL net088 0.1
+setvia 2 1 2
+addNet netname net088 width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  105 25
+addPin2Net  106 25
+routing grid off set 0 -6800
+
+
+AcsMgr::computeAcs Start Access Points Generation
+
+DrMgr::solve Start Detailed Routing
+DrSymmetry::solve Start max symmetric detection
+DrSymmetry::solve Self-sym: gnd
+DrSymmetry::solve Self-sym: ncas
+DrSymmetry::solve Self-sym: vcm
+DrSymmetry::solve Self-sym: vdd
+DrSymmetry::solve Sym:      vim vip
+DrSymmetry::solve Sym:      vom vop
+DrSymmetry::solve Self-sym: vs
+DrSymmetry::solve Self-sym: vcmon
+DrSymmetry::solve Self-sym: pcas
+DrSymmetry::solve Self-sym: bias2
+DrSymmetry::solve Self-sym: tail1
+DrSymmetry::solve Self-sym: nbias_tail
+DrSymmetry::solve Self-sym: vcmop
+DrSymmetry::solve Self-sym: net0108
+DrSymmetry::solve Self-sym: vs2
+DrSymmetry::solve Sym:      vo1p vo1m
+DrSymmetry::solve Sym:      casn casp
+DrSymmetry::solve Self-sym: bias1
+DrSymmetry::solve Self-sym: net096
+DrSymmetry::solve Sym:      cas2n cas2p
+DrSymmetry::solve Self-sym: net088
+
+DrGridRoute::runNRR	Iteration 0 Unrouted nets 2, vdd gnd
+DrGridAstar::run	Route net gnd, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net gnd, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net gnd, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net gnd, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net gnd, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net gnd, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net vdd, Sym: 0, SelfSym: 1, StrictDRC: 1 
+DrGridAstar::run	Route net vdd, Sym: 0, SelfSym: 1, StrictDRC: 1 
+DrGridAstar::run	Route net vdd, Sym: 0, SelfSym: 1, StrictDRC: 1 
+DrGridAstar::run	Route net vdd, Sym: 0, SelfSym: 1, StrictDRC: 1 
+DrGridAstar::run	Route net vdd, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net vdd, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridRoute::solveDR Solved!!!!
+
+DrGridRoute::runNRR	Iteration 0 Unrouted nets 24, cas2p cas2n net096 bias1 casp vo1m casn vo1p vs2 net0108 vcmop nbias_tail tail1 vcmon vop vom vip vim vcm ncas vs pcas bias2 net088
+DrGridAstar::run	Route net net088, Sym: 0, SelfSym: 1, StrictDRC: 1 
+DrGridAstar::run	Route net net088, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net bias2, Sym: 0, SelfSym: 1, StrictDRC: 1 
+DrGridAstar::run	Route net bias2, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net vcmop, Sym: 0, SelfSym: 1, StrictDRC: 1 
+DrGridAstar::run	Route net vcmop, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net tail1, Sym: 0, SelfSym: 1, StrictDRC: 1 
+DrGridAstar::run	Route net vs2, Sym: 0, SelfSym: 1, StrictDRC: 1 
+DrGridAstar::run	Route net net0108, Sym: 0, SelfSym: 1, StrictDRC: 1 
+DrGridAstar::run	Route net net0108, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net bias1, Sym: 0, SelfSym: 1, StrictDRC: 1 
+DrGridAstar::run	Route net bias1, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net net096, Sym: 0, SelfSym: 1, StrictDRC: 1 
+DrGridAstar::run	Route net net096, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net pcas, Sym: 0, SelfSym: 1, StrictDRC: 1 
+DrGridAstar::run	Route net pcas, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net vs, Sym: 0, SelfSym: 1, StrictDRC: 1 
+DrGridAstar::run	Route net vcmon, Sym: 0, SelfSym: 1, StrictDRC: 1 
+DrGridAstar::run	Route net vcmon, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net ncas, Sym: 0, SelfSym: 1, StrictDRC: 1 
+DrGridAstar::run	Route net ncas, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net vcm, Sym: 0, SelfSym: 1, StrictDRC: 1 
+DrGridAstar::run	Route net vcm, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net nbias_tail, Sym: 0, SelfSym: 1, StrictDRC: 1 
+DrGridAstar::run	Route net nbias_tail, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net cas2n, Sym: 1, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net cas2p, Sym: 1, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net casn, Sym: 1, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net casp, Sym: 1, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net vip, Sym: 1, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net vim, Sym: 1, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net vo1p, Sym: 1, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net vo1p, Sym: 1, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net vo1p, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net vo1m, Sym: 1, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net vo1m, Sym: 1, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net vo1m, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net vom, Sym: 1, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net vom, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net vop, Sym: 1, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net vop, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridRoute::solveDR Solved!!!!
+PostMgr::patchConvexJogs  Jog-1  4 (44000 14590) (43900 14590) (43900 14640) convex
+Net gnd, wl: 178400, #via: 0, area: 142617000.00, degSym: 0.00
+Net ncas, wl: 47200, #via: 5, area: 10926600.00, degSym: 0.07
+Net vcm, wl: 66800, #via: 5, area: 15069800.00, degSym: 0.00
+Net vdd, wl: 342800, #via: 0, area: 352817000.00, degSym: 0.82
+Net vim, wl: 31200, #via: 4, area: 7518600.00, degSym: 1.00
+Net vip, wl: 31200, #via: 4, area: 7518600.00, degSym: 1.00
+Net vom, wl: 64400, #via: 9, area: 16270600.00, degSym: 0.58
+Net vop, wl: 57200, #via: 9, area: 14559400.00, degSym: 0.65
+Net vs, wl: 34400, #via: 4, area: 8703400.00, degSym: 1.00
+Net vcmon, wl: 52000, #via: 8, area: 13035400.00, degSym: 0.83
+Net pcas, wl: 42000, #via: 0, area: 8537000.00, degSym: 0.10
+Net bias2, wl: 2800, #via: 0, area: 617000.00, degSym: 0.00
+Net tail1, wl: 16000, #via: 0, area: 3297000.00, degSym: 1.00
+Net nbias_tail, wl: 110000, #via: 8, area: 24206600.00, degSym: 0.52
+Net vcmop, wl: 6800, #via: 0, area: 1457000.00, degSym: 0.59
+Net net0108, wl: 30400, #via: 3, area: 7300200.00, degSym: 0.16
+Net vs2, wl: 43200, #via: 0, area: 8737000.00, degSym: 1.00
+Net vo1p, wl: 71600, #via: 7, area: 16576200.00, degSym: 0.45
+Net casn, wl: 10400, #via: 2, area: 3012200.00, degSym: 1.00
+Net vo1m, wl: 74800, #via: 5, area: 16410600.00, degSym: 0.43
+Net casp, wl: 10400, #via: 2, area: 3012200.00, degSym: 1.00
+Net bias1, wl: 44800, #via: 0, area: 9017000.00, degSym: 0.00
+Net net096, wl: 37600, #via: 4, area: 8737000.00, degSym: 0.53
+Net cas2n, wl: 13200, #via: 2, area: 3386600.00, degSym: 1.00
+Net cas2p, wl: 13200, #via: 2, area: 3386600.00, degSym: 1.00
+Net net088, wl: 4400, #via: 0, area: 937000.00, degSym: 0.00
+---------- Anaroute             total  time usage -----------
+Real: 0.272619s; User: 0.272610s; System: 0.000000s
+
+Total wl: 1437200, Total #via: 83, Total Sym wl: 760800, Total degSym: 0.5294, Avg degSym: 0.5662
+
+Writing Routing GDS Layout ./OTA_XT_MAGICAL.route.gds
+Writing Dumb File ./OTA_XT_MAGICAL.ioPin
+PnR: routing finished  OTA_XT_MAGICAL
+[INF 2023-03-28 14:21:51     8 sec]  Flow::GdsWriter:: Write circuit COMPARATOR_schematic layout to ./COMPARATOR_schematic.place.gds 
+runtime,  0.26139044761657715
+Parsing LEF file ../mockPDK/mock.lef
+Parsing Tech file ../mockPDK/mock.techfile
+Parsing placement GDS layout file ./COMPARATOR_schematic.place.gds
+
+
+AcsMgr::computeAcs Start Access Points Generation
+addPin 0 False 0
+addShape2Pin 0 0 16700 20700 20100 20900
+addPin 1 False 0
+addShape2Pin 1 0 26300 17100 27300 17300
+addPin 2 False 0
+addShape2Pin 2 0 9500 17100 10500 17300
+addPin 3 False 0
+addShape2Pin 3 0 15500 11500 16500 11700
+addPin 4 False 0
+addShape2Pin 4 0 20300 11500 21300 11700
+addPin 5 False 0
+addShape2Pin 5 0 35800 19870 37800 20130
+addPin 6 True 0
+addShape2Pin 6 5 28300 10300 28500 12500
+addPin 7 True 0
+addShape2Pin 7 5 8300 10300 8500 12500
+addPin 8 True 0
+addShape2Pin 8 5 26700 3100 28500 3300
+addPin 9 True 0
+addShape2Pin 9 5 8300 3100 10100 3300
+addPin 10 True 0
+addShape2Pin 10 5 16700 20300 20100 20500
+addPin 11 True 1
+addShape2Pin 11 5 -1800 -5800 38600 -2200
+addPin sub 12 True False
+addShape2Pin psub shape 5 4700 700 32100 900
+addPin 13 False 0
+addShape2Pin 13 0 27100 1500 28100 1700
+addPin 14 False 0
+addShape2Pin 14 0 27500 5900 28500 6100
+addPin 15 False 0
+addShape2Pin 15 0 35800 -130 37800 130
+addPin 16 False 0
+addShape2Pin 16 0 8700 1500 9700 1700
+addPin 17 False 0
+addShape2Pin 17 0 8300 5900 9300 6100
+addPin 18 False 0
+addShape2Pin 18 0 -1000 -130 1000 130
+addPin 19 True 0
+addShape2Pin 19 5 26300 5100 29700 5300
+addPin 20 True 0
+addShape2Pin 20 5 25500 14300 28100 14500
+addPin 21 True 0
+addShape2Pin 21 5 7100 5100 10500 5300
+addPin 22 True 0
+addShape2Pin 22 5 8700 14300 11300 14500
+addPin 23 True 0
+addShape2Pin 23 5 14700 8700 17300 8900
+addPin 24 True 0
+addShape2Pin 24 5 19500 8700 22100 8900
+addPin 25 True 0
+addShape2Pin 25 5 12300 3500 17300 3700
+addPin 26 True 0
+addShape2Pin 26 5 19500 3500 24500 3700
+addPin 27 True 1
+addShape2Pin 27 5 -1800 23150 38600 26750
+addPin 28 False 0
+addShape2Pin 28 0 19900 17100 23300 17300
+addPin 29 False 0
+addShape2Pin 29 0 -1000 15870 1000 16130
+addPin 30 False 0
+addShape2Pin 30 0 13500 17100 16900 17300
+addPin 31 False 0
+addShape2Pin 31 0 35800 15870 37800 16130
+addPin 32 False 0
+addShape2Pin 32 0 28300 12700 30900 12900
+addPin 33 False 0
+addShape2Pin 33 0 24300 11900 26100 12100
+addPin 34 False 0
+addShape2Pin 34 0 20300 13900 22900 14100
+addPin 35 False 0
+addShape2Pin 35 0 26700 15500 26900 16500
+addPin 36 False 0
+addShape2Pin 36 0 5900 12700 8500 12900
+addPin 37 False 0
+addShape2Pin 37 0 10700 11900 12500 12100
+addPin 38 False 0
+addShape2Pin 38 0 13900 13900 16500 14100
+addPin 39 False 0
+addShape2Pin 39 0 9900 15500 10100 16500
+addPin 40 False 0
+addShape2Pin 40 0 26700 3500 28500 3700
+addPin 41 False 0
+addShape2Pin 41 0 24300 12300 26100 12500
+addPin 42 False 0
+addShape2Pin 42 0 11100 10300 12100 10500
+addPin 43 False 0
+addShape2Pin 43 0 27100 7900 28900 8100
+addPin 44 False 0
+addShape2Pin 44 0 20700 9900 20900 10900
+addPin 45 False 0
+addShape2Pin 45 0 13100 6300 16500 6500
+addPin 46 False 0
+addShape2Pin 46 0 20700 4300 23300 4500
+addPin 47 False 0
+addShape2Pin 47 0 8300 3500 10100 3700
+addPin 48 False 0
+addShape2Pin 48 0 24700 10300 25700 10500
+addPin 49 False 0
+addShape2Pin 49 0 10700 12300 12500 12500
+addPin 50 False 0
+addShape2Pin 50 0 7900 7900 9700 8100
+addPin 51 False 0
+addShape2Pin 51 0 15900 9900 16100 10900
+addPin 52 False 0
+addShape2Pin 52 0 13500 4300 16100 4500
+addPin 53 False 0
+addShape2Pin 53 0 20300 6300 23700 6500
+addPin 54 False 0
+addShape2Pin 54 0 17100 18700 19700 18900
+addPin 55 False 0
+addShape2Pin 55 0 19900 16700 23300 16900
+addPin 56 False 0
+addShape2Pin 56 0 13500 16700 16900 16900
+setwidth COMPARATOR_schematic clk 0.1
+setvia 2 1 2
+addNet netname clk width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  0 0
+addPin2Net  1 0
+addPin2Net  2 0
+addPin2Net  3 0
+addPin2Net  4 0
+addPin2Net  5 0
+setwidth COMPARATOR_schematic gnd 0.5
+setvia 4 2 2
+addNet netname gnd width 1000 cuts 4 isPower True rows 2 cols 2
+addPin2Net  6 1
+addPin2Net  7 1
+addPin2Net  8 1
+addPin2Net  9 1
+addPin2Net  10 1
+addPin2Net  11 1
+addPin2Net pubs ver 12 1
+setwidth COMPARATOR_schematic outm 0.1
+setvia 2 1 2
+addNet netname outm width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  13 2
+addPin2Net  14 2
+addPin2Net  15 2
+setwidth COMPARATOR_schematic outp 0.1
+setvia 2 1 2
+addNet netname outp width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  16 3
+addPin2Net  17 3
+addPin2Net  18 3
+setwidth COMPARATOR_schematic vdd 0.5
+setvia 4 2 2
+addNet netname vdd width 1000 cuts 4 isPower True rows 2 cols 2
+addPin2Net  19 4
+addPin2Net  20 4
+addPin2Net  21 4
+addPin2Net  22 4
+addPin2Net  23 4
+addPin2Net  24 4
+addPin2Net  25 4
+addPin2Net  26 4
+addPin2Net  27 4
+setwidth COMPARATOR_schematic _net0 0.1
+setvia 2 1 2
+addNet netname _net0 width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  28 5
+addPin2Net  29 5
+setwidth COMPARATOR_schematic _net1 0.1
+setvia 2 1 2
+addNet netname _net1 width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  30 6
+addPin2Net  31 6
+setwidth COMPARATOR_schematic intern 0.1
+setvia 2 1 2
+addNet netname intern width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  32 7
+addPin2Net  33 7
+addPin2Net  34 7
+addPin2Net  35 7
+setwidth COMPARATOR_schematic interp 0.1
+setvia 2 1 2
+addNet netname interp width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  36 8
+addPin2Net  37 8
+addPin2Net  38 8
+addPin2Net  39 8
+setwidth COMPARATOR_schematic crossp 0.1
+setvia 2 1 2
+addNet netname crossp width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  40 9
+addPin2Net  41 9
+addPin2Net  42 9
+addPin2Net  43 9
+addPin2Net  44 9
+addPin2Net  45 9
+addPin2Net  46 9
+setwidth COMPARATOR_schematic crossn 0.1
+setvia 2 1 2
+addNet netname crossn width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  47 10
+addPin2Net  48 10
+addPin2Net  49 10
+addPin2Net  50 10
+addPin2Net  51 10
+addPin2Net  52 10
+addPin2Net  53 10
+setwidth COMPARATOR_schematic net069 0.1
+setvia 2 1 2
+addNet netname net069 width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  54 11
+addPin2Net  55 11
+addPin2Net  56 11
+routing grid off set 0 -4000
+
+
+AcsMgr::computeAcs Start Access Points Generation
+
+DrMgr::solve Start Detailed Routing
+DrSymmetry::solve Start max symmetric detection
+DrSymmetry::solve Self-sym: clk
+DrSymmetry::solve Self-sym: gnd
+DrSymmetry::solve Sym:      outm outp
+DrSymmetry::solve Self-sym: vdd
+DrSymmetry::solve Sym:      _net0 _net1
+DrSymmetry::solve Sym:      intern interp
+DrSymmetry::solve Sym:      crossp crossn
+DrSymmetry::solve Self-sym: net069
+
+DrGridRoute::runNRR	Iteration 0 Unrouted nets 2, gnd vdd
+DrGridAstar::run	Route net vdd, Sym: 0, SelfSym: 1, StrictDRC: 1 
+DrGridAstar::run	Route net vdd, Sym: 0, SelfSym: 1, StrictDRC: 1 
+DrGridAstar::run	Route net vdd, Sym: 0, SelfSym: 1, StrictDRC: 1 
+DrGridAstar::run	Route net vdd, Sym: 0, SelfSym: 1, StrictDRC: 1 
+DrGridAstar::run	Route net gnd, Sym: 0, SelfSym: 1, StrictDRC: 1 
+DrGridAstar::run	ERROR: Route net gnd failed!
+DrGridAstar::run	Route net gnd, Sym: 0, SelfSym: 1, StrictDRC: 0 
+DrGridAstar::run	Route net gnd, Sym: 0, SelfSym: 1, StrictDRC: 0 
+DrGridAstar::run	Route net gnd, Sym: 0, SelfSym: 0, StrictDRC: 0 
+DrGridAstar::run	Route net gnd, Sym: 0, SelfSym: 0, StrictDRC: 0 
+DrGridRoute::ripupSingleNet Ripup net gnd (fail 1)
+
+DrGridRoute::runNRR	Iteration 1 Unrouted nets 1, gnd
+DrGridAstar::run	Route net gnd, Sym: 0, SelfSym: 1, StrictDRC: 1 
+DrGridAstar::run	ERROR: Route net gnd failed!
+DrGridAstar::run	Route net gnd, Sym: 0, SelfSym: 1, StrictDRC: 0 
+DrGridAstar::run	Route net gnd, Sym: 0, SelfSym: 1, StrictDRC: 0 
+DrGridAstar::run	Route net gnd, Sym: 0, SelfSym: 0, StrictDRC: 0 
+DrGridAstar::run	Route net gnd, Sym: 0, SelfSym: 0, StrictDRC: 0 
+DrGridRoute::ripupSingleNet Ripup net vdd (fail 1)
+DrGridRoute::ripupSingleNet Ripup net gnd (fail 2)
+
+DrGridRoute::runNRR	Iteration 2 Unrouted nets 2, vdd gnd
+DrGridAstar::run	Route net gnd, Sym: 0, SelfSym: 1, StrictDRC: 1 
+DrGridAstar::run	Route net gnd, Sym: 0, SelfSym: 1, StrictDRC: 1 
+DrGridAstar::run	Route net gnd, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net gnd, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net vdd, Sym: 0, SelfSym: 1, StrictDRC: 1 
+DrGridAstar::run	Route net vdd, Sym: 0, SelfSym: 1, StrictDRC: 1 
+DrGridAstar::run	Route net vdd, Sym: 0, SelfSym: 1, StrictDRC: 1 
+DrGridAstar::run	Route net vdd, Sym: 0, SelfSym: 1, StrictDRC: 1 
+DrGridRoute::solveDR Solved!!!!
+
+DrGridRoute::runNRR	Iteration 0 Unrouted nets 10, crossn crossp interp intern _net1 _net0 outp outm clk net069
+DrGridAstar::run	Route net net069, Sym: 0, SelfSym: 1, StrictDRC: 1 
+DrGridAstar::run	Route net clk, Sym: 0, SelfSym: 1, StrictDRC: 1 
+DrGridAstar::run	Route net clk, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net intern, Sym: 1, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net interp, Sym: 1, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net outm, Sym: 1, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net outp, Sym: 1, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net _net0, Sym: 1, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net _net0, Sym: 1, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net _net0, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net _net1, Sym: 1, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net _net1, Sym: 1, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net _net1, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net crossp, Sym: 1, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net crossp, Sym: 1, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net crossp, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net crossn, Sym: 1, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net crossn, Sym: 1, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net crossn, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridRoute::solveDR Solved!!!!
+Net clk, wl: 43600, #via: 6, area: 12024000.00, degSym: 0.73
+Net gnd, wl: 67200, #via: 0, area: 77200000.00, degSym: 0.61
+Net outm, wl: 15600, #via: 2, area: 4032000.00, degSym: 1.00
+Net outp, wl: 15600, #via: 2, area: 4032000.00, degSym: 1.00
+Net vdd, wl: 121600, #via: 0, area: 129600000.00, degSym: 1.00
+Net _net0, wl: 23200, #via: 2, area: 5512000.00, degSym: 0.00
+Net _net1, wl: 24800, #via: 2, area: 5792000.00, degSym: 0.00
+Net intern, wl: 12400, #via: 0, area: 2840000.00, degSym: 1.00
+Net interp, wl: 12400, #via: 0, area: 2840000.00, degSym: 1.00
+Net crossp, wl: 34000, #via: 4, area: 9211200.00, degSym: 0.75
+Net crossn, wl: 33600, #via: 4, area: 9011200.00, degSym: 0.76
+Net net069, wl: 4800, #via: 0, area: 1120000.00, degSym: 1.00
+---------- Anaroute             total  time usage -----------
+Real: 0.046376s; User: 0.046367s; System: 0.000000s
+
+Total wl: 408800, Total #via: 22, Total Sym wl: 306400, Total degSym: 0.7495, Avg degSym: 0.7380
+
+Writing Routing GDS Layout ./COMPARATOR_schematic.route.gds
+Writing Dumb File ./COMPARATOR_schematic.ioPin
+PnR: routing finished  COMPARATOR_schematic
+[INF 2023-03-28 14:21:52     9 sec]  Flow::GdsWriter:: Write circuit RR1 layout to ./RR1.place.gds 
+runtime,  0.009604692459106445
+Parsing LEF file ../mockPDK/mock.lef
+Parsing Tech file ../mockPDK/mock.techfile
+Parsing placement GDS layout file ./RR1.place.gds
+
+
+AcsMgr::computeAcs Start Access Points Generation
+addPin 0 False 0
+addShape2Pin 0 1 9900 7100 11870 7300
+addPin 1 False 0
+addShape2Pin 1 1 15100 2700 15300 3700
+addPin 2 False 0
+addShape2Pin 2 0 23000 3870 25000 4130
+addPin 3 False 0
+addShape2Pin 3 1 12700 7100 14100 7300
+addPin 4 False 0
+addShape2Pin 4 0 23000 7870 25000 8130
+addPin 5 False 0
+addShape2Pin 5 0 9900 8420 14100 8900
+addPin 6 False 0
+addShape2Pin 6 0 -1000 7870 1000 8130
+addPin 7 True 0
+addShape2Pin 7 5 9900 5900 14100 6360
+addPin 8 True 0
+addShape2Pin 8 5 6300 1500 17700 1960
+addPin 9 True 1
+addShape2Pin 9 5 -1400 -3400 26200 -2200
+addPin 10 False 0
+addShape2Pin 10 1 9100 2700 9300 3700
+addPin 11 False 0
+addShape2Pin 11 0 -1000 3870 1000 4130
+addPin 12 False 0
+addShape2Pin 12 1 6300 2700 8140 2900
+addPin 13 False 0
+addShape2Pin 13 0 -1000 -130 1000 130
+addPin 14 True 0
+addShape2Pin 14 5 6300 4020 17700 4500
+addPin 15 True 1
+addShape2Pin 15 5 -1400 10900 26200 12100
+addPin 16 False 0
+addShape2Pin 16 1 16300 2700 17700 2900
+addPin 17 False 0
+addShape2Pin 17 0 23000 -130 25000 130
+setwidth RR1 net040 0.1
+setvia 2 1 2
+addNet netname net040 width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  0 0
+addPin2Net  1 0
+addPin2Net  2 0
+setwidth RR1 net010 0.1
+setvia 2 1 2
+addNet netname net010 width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  3 1
+addPin2Net  4 1
+setwidth RR1 VREF 0.1
+setvia 2 1 2
+addNet netname VREF width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  5 2
+addPin2Net  6 2
+setwidth RR1 GND 0.5
+setvia 4 2 2
+addNet netname GND width 1000 cuts 4 isPower True rows 2 cols 2
+addPin2Net  7 3
+addPin2Net  8 3
+addPin2Net  9 3
+setwidth RR1 net025 0.1
+setvia 2 1 2
+addNet netname net025 width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  10 4
+addPin2Net  11 4
+setwidth RR1 SYS_CLKB 0.1
+setvia 2 1 2
+addNet netname SYS_CLKB width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  12 5
+addPin2Net  13 5
+setwidth RR1 VDD 0.5
+setvia 4 2 2
+addNet netname VDD width 1000 cuts 4 isPower True rows 2 cols 2
+addPin2Net  14 6
+addPin2Net  15 6
+setwidth RR1 net035 0.1
+setvia 2 1 2
+addNet netname net035 width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  16 7
+addPin2Net  17 7
+routing grid off set 0 -2800
+
+
+AcsMgr::computeAcs Start Access Points Generation
+
+DrMgr::solve Start Detailed Routing
+DrSymmetry::solve Start max symmetric detection
+DrSymmetry::solve Self-sym: net040
+DrSymmetry::solve Sym:      net010 VREF
+DrSymmetry::solve Self-sym: GND
+DrSymmetry::solve Self-sym: net025
+DrSymmetry::solve Sym:      SYS_CLKB net035
+DrSymmetry::solve Self-sym: VDD
+
+DrGridRoute::runNRR	Iteration 0 Unrouted nets 2, GND VDD
+DrGridAstar::run	Route net VDD, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net GND, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net GND, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridRoute::solveDR Solved!!!!
+
+DrGridRoute::runNRR	Iteration 0 Unrouted nets 6, net035 SYS_CLKB VREF net010 net040 net025
+DrGridAstar::run	Route net net025, Sym: 0, SelfSym: 1, StrictDRC: 1 
+DrGridAstar::run	Route net net025, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net net040, Sym: 0, SelfSym: 1, StrictDRC: 1 
+DrGridAstar::run	Route net net040, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net net035, Sym: 1, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net net035, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net SYS_CLKB, Sym: 1, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net SYS_CLKB, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net net010, Sym: 1, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net net010, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net VREF, Sym: 1, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net VREF, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridRoute::solveDR Solved!!!!
+Net net040, wl: 18000, #via: 1, area: 4136000.00, degSym: 0.00
+Net net010, wl: 10000, #via: 1, area: 2569600.00, degSym: 0.00
+Net VREF, wl: 10000, #via: 0, area: 2080000.00, degSym: 0.00
+Net GND, wl: 16800, #via: 0, area: 20800000.00, degSym: 0.00
+Net net025, wl: 8800, #via: 1, area: 2256000.00, degSym: 0.00
+Net SYS_CLKB, wl: 8400, #via: 1, area: 2249600.00, degSym: 1.00
+Net VDD, wl: 6800, #via: 0, area: 7800000.00, degSym: 0.00
+Net net035, wl: 8400, #via: 1, area: 2249600.00, degSym: 1.00
+---------- Anaroute             total  time usage -----------
+Real: 0.007017s; User: 0.007004s; System: 0.000000s
+
+Total wl: 87200, Total #via: 5, Total Sym wl: 16800, Total degSym: 0.1927, Avg degSym: 0.2500
+
+Writing Routing GDS Layout ./RR1.route.gds
+Writing Dumb File ./RR1.ioPin
+PnR: routing finished  RR1
+[INF 2023-03-28 14:21:52     9 sec]  Flow::GdsWriter:: Write circuit RRR1 layout to ./RRR1.place.gds 
+runtime,  0.021159887313842773
+Parsing LEF file ../mockPDK/mock.lef
+Parsing Tech file ../mockPDK/mock.techfile
+Parsing placement GDS layout file ./RRR1.place.gds
+
+
+AcsMgr::computeAcs Start Access Points Generation
+addPin 0 False 0
+addShape2Pin 0 1 17100 9100 17300 10100
+addPin 1 False 0
+addShape2Pin 1 1 17900 4300 18100 5700
+addPin 2 False 0
+addShape2Pin 2 0 33400 -130 35400 130
+addPin 3 False 0
+addShape2Pin 3 1 14300 9100 16140 9300
+addPin 4 False 0
+addShape2Pin 4 1 10530 9100 12100 9300
+addPin 5 False 0
+addShape2Pin 5 0 -1000 11870 1000 12130
+addPin 6 True 0
+addShape2Pin 6 5 14300 10420 25700 10900
+addPin 7 True 0
+addShape2Pin 7 5 8300 6020 24100 6500
+addPin 8 True 0
+addShape2Pin 8 5 8300 10420 12100 10900
+addPin 9 True 1
+addShape2Pin 9 5 -1400 12900 36600 16500
+addPin 10 False 0
+addShape2Pin 10 1 23100 9100 23300 10100
+addPin 11 False 0
+addShape2Pin 11 0 33400 11870 35400 12130
+addPin 12 False 0
+addShape2Pin 12 1 24300 9100 25700 9300
+addPin 13 False 0
+addShape2Pin 13 0 33400 7870 35400 8130
+addPin 14 True 0
+addShape2Pin 14 5 14300 7900 25700 8360
+addPin 15 True 0
+addShape2Pin 15 5 8300 3500 24100 3960
+addPin 16 True 0
+addShape2Pin 16 5 8300 7900 12100 8360
+addPin 17 True 1
+addShape2Pin 17 5 -1400 -5800 36600 -2200
+addPin 18 False 0
+addShape2Pin 18 1 14300 4300 14500 5700
+addPin 19 False 0
+addShape2Pin 19 0 -1000 -130 1000 130
+addPin 20 False 0
+addShape2Pin 20 1 20700 4700 24100 4900
+addPin 21 False 0
+addShape2Pin 21 0 33400 3870 35400 4130
+addPin 22 False 0
+addShape2Pin 22 1 8300 4700 11630 4900
+addPin 23 False 0
+addShape2Pin 23 0 -1000 3870 1000 4130
+addPin 24 False 0
+addShape2Pin 24 1 8300 9100 10100 9300
+addPin 25 False 0
+addShape2Pin 25 0 -1000 7870 1000 8130
+setwidth RRR1 net046 0.1
+setvia 2 1 2
+addNet netname net046 width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  0 0
+addPin2Net  1 0
+addPin2Net  2 0
+setwidth RRR1 SYS_CLKB 0.1
+setvia 2 1 2
+addNet netname SYS_CLKB width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  3 1
+addPin2Net  4 1
+addPin2Net  5 1
+setwidth RRR1 VDD 0.5
+setvia 4 2 2
+addNet netname VDD width 1000 cuts 4 isPower True rows 2 cols 2
+addPin2Net  6 2
+addPin2Net  7 2
+addPin2Net  8 2
+addPin2Net  9 2
+setwidth RRR1 DO 0.1
+setvia 2 1 2
+addNet netname DO width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  10 3
+addPin2Net  11 3
+setwidth RRR1 net038 0.1
+setvia 2 1 2
+addNet netname net038 width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  12 4
+addPin2Net  13 4
+setwidth RRR1 GND 0.5
+setvia 4 2 2
+addNet netname GND width 1000 cuts 4 isPower True rows 2 cols 2
+addPin2Net  14 5
+addPin2Net  15 5
+addPin2Net  16 5
+addPin2Net  17 5
+setwidth RRR1 net025 0.1
+setvia 2 1 2
+addNet netname net025 width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  18 6
+addPin2Net  19 6
+setwidth RRR1 net028 0.1
+setvia 2 1 2
+addNet netname net028 width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  20 7
+addPin2Net  21 7
+setwidth RRR1 net020 0.1
+setvia 2 1 2
+addNet netname net020 width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  22 8
+addPin2Net  23 8
+setwidth RRR1 SYS_CLK 0.1
+setvia 2 1 2
+addNet netname SYS_CLK width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  24 9
+addPin2Net  25 9
+routing grid off set 0 -4000
+
+
+AcsMgr::computeAcs Start Access Points Generation
+
+DrMgr::solve Start Detailed Routing
+DrSymmetry::solve Start max symmetric detection
+DrSymmetry::solve Self-sym: net046
+DrSymmetry::solve Self-sym: SYS_CLKB
+DrSymmetry::solve Self-sym: VDD
+DrSymmetry::solve Self-sym: DO
+DrSymmetry::solve Sym:      net038 SYS_CLK
+DrSymmetry::solve Self-sym: GND
+DrSymmetry::solve Self-sym: net025
+DrSymmetry::solve Sym:      net028 net020
+
+DrGridRoute::runNRR	Iteration 0 Unrouted nets 2, GND VDD
+DrGridAstar::run	Route net VDD, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net VDD, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net VDD, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net GND, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net GND, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net GND, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridRoute::solveDR Solved!!!!
+
+DrGridRoute::runNRR	Iteration 0 Unrouted nets 8, SYS_CLK net020 net028 net025 net038 net046 SYS_CLKB DO
+DrGridAstar::run	Route net DO, Sym: 0, SelfSym: 1, StrictDRC: 1 
+DrGridAstar::run	Route net DO, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net SYS_CLKB, Sym: 0, SelfSym: 1, StrictDRC: 1 
+DrGridAstar::run	Route net SYS_CLKB, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net net025, Sym: 0, SelfSym: 1, StrictDRC: 1 
+DrGridAstar::run	Route net net025, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net net046, Sym: 0, SelfSym: 1, StrictDRC: 1 
+DrGridAstar::run	Route net net046, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net net038, Sym: 1, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net net038, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net SYS_CLK, Sym: 1, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net SYS_CLK, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net net020, Sym: 1, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net net020, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net net028, Sym: 1, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net net028, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridRoute::solveDR Solved!!!!
+Net net046, wl: 33600, #via: 1, area: 7449600.00, degSym: 0.01
+Net SYS_CLKB, wl: 15200, #via: 1, area: 3689600.00, degSym: 0.00
+Net VDD, wl: 11600, #via: 0, area: 14600000.00, degSym: 0.00
+Net DO, wl: 12400, #via: 1, area: 3089600.00, degSym: 0.00
+Net net038, wl: 9200, #via: 1, area: 2409600.00, degSym: 0.13
+Net GND, wl: 27600, #via: 0, area: 32600000.00, degSym: 0.00
+Net net025, wl: 18800, #via: 1, area: 4449600.00, degSym: 0.00
+Net net028, wl: 10400, #via: 1, area: 2536000.00, degSym: 0.00
+Net net020, wl: 8400, #via: 1, area: 2249600.00, degSym: 0.00
+Net SYS_CLK, wl: 8800, #via: 1, area: 2329600.00, degSym: 0.14
+---------- Anaroute             total  time usage -----------
+Real: 0.018205s; User: 0.014509s; System: 0.003683s
+
+Total wl: 156000, Total #via: 8, Total Sym wl: 2800, Total degSym: 0.0180, Avg degSym: 0.0279
+
+Writing Routing GDS Layout ./RRR1.route.gds
+Writing Dumb File ./RRR1.ioPin
+PnR: routing finished  RRR1
+[INF 2023-03-28 14:21:52     9 sec]  Flow::GdsWriter:: Write circuit CTDSM_TOP layout to ./CTDSM_TOP.place.gds 
+runtime,  0.30850815773010254
+Parsing LEF file ../mockPDK/mock.lef
+Parsing Tech file ../mockPDK/mock.techfile
+Parsing placement GDS layout file ./CTDSM_TOP.place.gds
+
+
+AcsMgr::computeAcs Start Access Points Generation
+addPin 0 False 0
+addShape2Pin 0 0 133800 150270 135800 150530
+addPin 1 True 1
+addShape2Pin 1 5 -2600 -15000 238600 -11400
+addPin sub 2 True False
+addShape2Pin psub shape 5 -1300 -8900 237300 -8700
+addPin 3 False 0
+addShape2Pin 3 0 158600 66270 160600 66530
+addPin 4 False 0
+addShape2Pin 4 0 158600 211470 160600 211730
+addPin 5 False 0
+addShape2Pin 5 0 135400 282670 137400 282930
+addPin 6 False 0
+addShape2Pin 6 0 99400 146270 101400 146530
+addPin 7 False 0
+addShape2Pin 7 0 75400 211470 77400 211730
+addPin 8 False 0
+addShape2Pin 8 0 75400 66270 77400 66530
+addPin 9 True 1
+addShape2Pin 9 5 -2600 291550 238600 295150
+addPin 10 False 0
+addShape2Pin 10 0 146600 1470 148600 1730
+addPin 11 False 0
+addShape2Pin 11 0 87400 1470 89400 1730
+addPin 12 False 0
+addShape2Pin 12 0 146600 5470 148600 5730
+addPin 13 False 0
+addShape2Pin 13 0 165100 96700 165300 97700
+addPin 14 False 0
+addShape2Pin 14 0 147100 245900 147300 247300
+addPin 15 False 0
+addShape2Pin 15 1 145900 99900 172900 100320
+addPin 16 False 0
+addShape2Pin 16 0 158600 54270 160600 54530
+addPin 17 False 0
+addShape2Pin 17 0 87400 5470 89400 5730
+addPin 18 False 0
+addShape2Pin 18 0 70700 96700 70900 97700
+addPin 19 False 0
+addShape2Pin 19 0 88700 245900 88900 247300
+addPin 20 False 0
+addShape2Pin 20 1 63100 99900 90100 100320
+addPin 21 False 0
+addShape2Pin 21 0 75400 54270 77400 54530
+addPin 22 False 0
+addShape2Pin 22 0 48700 18700 48900 20100
+addPin 23 False 0
+addShape2Pin 23 0 55500 128300 55700 129700
+addPin 24 False 0
+addShape2Pin 24 1 51100 15100 70900 15470
+addPin 25 False 0
+addShape2Pin 25 0 75400 199470 77400 199730
+addPin 26 False 0
+addShape2Pin 26 0 187100 18700 187300 20100
+addPin 27 False 0
+addShape2Pin 27 0 180300 128300 180500 129700
+addPin 28 False 0
+addShape2Pin 28 1 165100 15100 184900 15470
+addPin 29 False 0
+addShape2Pin 29 0 158600 199470 160600 199730
+addPin 30 False 0
+addShape2Pin 30 0 165100 174700 165300 176100
+addPin 31 False 0
+addShape2Pin 31 0 165100 202700 165300 204100
+addPin 32 False 0
+addShape2Pin 32 0 135400 278670 137400 278930
+addPin 33 False 0
+addShape2Pin 33 0 70700 174700 70900 176100
+addPin 34 False 0
+addShape2Pin 34 0 70700 202700 70900 204100
+addPin 35 False 0
+addShape2Pin 35 0 98600 278670 100600 278930
+addPin 36 False 0
+addShape2Pin 36 0 76700 135100 76900 136500
+addPin 37 False 0
+addShape2Pin 37 1 63100 125680 90100 126100
+addPin 38 False 0
+addShape2Pin 38 0 75400 58270 77400 58530
+addPin 39 False 0
+addShape2Pin 39 0 159100 135100 159300 136500
+addPin 40 False 0
+addShape2Pin 40 1 145900 125680 172900 126100
+addPin 41 False 0
+addShape2Pin 41 0 158600 58270 160600 58530
+addPin 42 False 0
+addShape2Pin 42 0 70700 38300 70900 39300
+addPin 43 False 0
+addShape2Pin 43 0 186300 202700 186500 204100
+addPin 44 False 0
+addShape2Pin 44 1 165100 35730 184900 36100
+addPin 45 False 0
+addShape2Pin 45 0 158600 203470 160600 203730
+addPin 46 False 0
+addShape2Pin 46 0 165100 38300 165300 39300
+addPin 47 False 0
+addShape2Pin 47 0 49500 202700 49700 204100
+addPin 48 False 0
+addShape2Pin 48 1 51100 35730 70900 36100
+addPin 49 False 0
+addShape2Pin 49 0 75400 203470 77400 203730
+addPin 50 False 0
+addShape2Pin 50 0 67000 150670 69000 150930
+addPin 51 False 0
+addShape2Pin 51 0 167000 150670 169000 150930
+addPin 52 False 0
+addShape2Pin 52 0 109900 252700 110100 254100
+addPin 53 False 0
+addShape2Pin 53 0 187100 33900 187300 35300
+addPin 54 False 0
+addShape2Pin 54 0 49500 198300 49700 199700
+addPin 55 False 0
+addShape2Pin 55 0 91000 150670 93000 150930
+addPin 56 False 0
+addShape2Pin 56 0 125900 252700 126100 254100
+addPin 57 False 0
+addShape2Pin 57 0 186300 198300 186500 199700
+addPin 58 False 0
+addShape2Pin 58 0 48700 33900 48900 35300
+addPin 59 False 0
+addShape2Pin 59 0 143000 150670 145000 150930
+addPin 60 False 0
+addShape2Pin 60 0 135400 262670 137400 262930
+addPin 61 False 0
+addShape2Pin 61 0 133800 142270 135800 142530
+addPin 62 False 0
+addShape2Pin 62 0 98600 262670 100600 262930
+addPin 63 False 0
+addShape2Pin 63 0 99400 142270 101400 142530
+addPin 64 False 0
+addShape2Pin 64 0 91000 146670 93000 146930
+addPin 65 False 0
+addShape2Pin 65 0 67000 146670 69000 146930
+addPin 66 False 0
+addShape2Pin 66 0 99400 138270 101400 138530
+addPin 67 False 0
+addShape2Pin 67 0 67000 142670 69000 142930
+addPin 68 False 0
+addShape2Pin 68 0 167000 142670 169000 142930
+addPin 69 False 0
+addShape2Pin 69 0 99400 150270 101400 150530
+addPin 70 False 0
+addShape2Pin 70 0 91000 142670 93000 142930
+addPin 71 False 0
+addShape2Pin 71 0 143000 146670 145000 146930
+addPin 72 False 0
+addShape2Pin 72 0 167000 146670 169000 146930
+addPin 73 False 0
+addShape2Pin 73 0 133800 138270 135800 138530
+addPin 74 False 0
+addShape2Pin 74 0 143000 142670 145000 142930
+addPin 75 False 0
+addShape2Pin 75 0 133800 146270 135800 146530
+setwidth CTDSM_TOP DO 0.1
+setvia 2 1 2
+addNet netname DO width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  0 0
+longwire CTDSM_TOP GND 137.8
+setwidth CTDSM_TOP GND 0.5
+setvia 9 3 3
+addNet netname GND width 1000 cuts 9 isPower True rows 3 cols 3
+addPin2Net  1 1
+addPin2Net  1 1
+addPin2Net  1 1
+addPin2Net  1 1
+addPin2Net  1 1
+addPin2Net  1 1
+addPin2Net  1 1
+addPin2Net  1 1
+addPin2Net pubs ver 2 1
+setwidth CTDSM_TOP IBIAS1 0.1
+setvia 2 1 2
+addNet netname IBIAS1 width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  3 2
+setwidth CTDSM_TOP IBIAS2 0.1
+setvia 2 1 2
+addNet netname IBIAS2 width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  4 3
+setwidth CTDSM_TOP SYS_CLK 0.1
+setvia 2 1 2
+addNet netname SYS_CLK width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  5 4
+addPin2Net  6 4
+setwidth CTDSM_TOP VCM 0.1
+setvia 2 1 2
+addNet netname VCM width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  7 5
+addPin2Net  8 5
+longwire CTDSM_TOP VDD 120.6
+setwidth CTDSM_TOP VDD 0.5
+setvia 9 3 3
+addNet netname VDD width 1000 cuts 9 isPower True rows 3 cols 3
+addPin2Net  9 6
+addPin2Net  9 6
+addPin2Net  9 6
+addPin2Net  9 6
+addPin2Net  9 6
+addPin2Net  9 6
+addPin2Net  9 6
+setwidth CTDSM_TOP VINN 0.1
+setvia 2 1 2
+addNet netname VINN width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  10 7
+setwidth CTDSM_TOP VINP 0.1
+setvia 2 1 2
+addNet netname VINP width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  11 8
+longwire CTDSM_TOP OTA1_INN 120.915
+setwidth CTDSM_TOP OTA1_INN 0.2
+setvia 9 3 3
+addNet netname OTA1_INN width 400 cuts 9 isPower False rows 3 cols 3
+addPin2Net  12 9
+addPin2Net  13 9
+addPin2Net  14 9
+addPin2Net  15 9
+addPin2Net  16 9
+longwire CTDSM_TOP OTA1_INP 120.915
+setwidth CTDSM_TOP OTA1_INP 0.2
+setvia 9 3 3
+addNet netname OTA1_INP width 400 cuts 9 isPower False rows 3 cols 3
+addPin2Net  17 10
+addPin2Net  18 10
+addPin2Net  19 10
+addPin2Net  20 10
+addPin2Net  21 10
+setwidth CTDSM_TOP OTA2_INN 0.1
+setvia 4 2 2
+addNet netname OTA2_INN width 200 cuts 4 isPower False rows 2 cols 2
+addPin2Net  22 11
+addPin2Net  23 11
+addPin2Net  24 11
+addPin2Net  25 11
+setwidth CTDSM_TOP OTA2_INP 0.1
+setvia 4 2 2
+addNet netname OTA2_INP width 200 cuts 4 isPower False rows 2 cols 2
+addPin2Net  26 12
+addPin2Net  27 12
+addPin2Net  28 12
+addPin2Net  29 12
+setwidth CTDSM_TOP SUM_N 0.1
+setvia 2 1 2
+addNet netname SUM_N width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  30 13
+addPin2Net  31 13
+addPin2Net  32 13
+setwidth CTDSM_TOP SUM_P 0.1
+setvia 2 1 2
+addNet netname SUM_P width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  33 14
+addPin2Net  34 14
+addPin2Net  35 14
+setwidth CTDSM_TOP VINT1N 0.1
+setvia 2 1 2
+addNet netname VINT1N width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  36 15
+addPin2Net  37 15
+addPin2Net  38 15
+setwidth CTDSM_TOP VINT1P 0.1
+setvia 2 1 2
+addNet netname VINT1P width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  39 16
+addPin2Net  40 16
+addPin2Net  41 16
+setwidth CTDSM_TOP VINT2N 0.1
+setvia 4 2 2
+addNet netname VINT2N width 200 cuts 4 isPower False rows 2 cols 2
+addPin2Net  42 17
+addPin2Net  43 17
+addPin2Net  44 17
+addPin2Net  45 17
+setwidth CTDSM_TOP VINT2P 0.1
+setvia 4 2 2
+addNet netname VINT2P width 200 cuts 4 isPower False rows 2 cols 2
+addPin2Net  46 18
+addPin2Net  47 18
+addPin2Net  48 18
+addPin2Net  49 18
+setwidth CTDSM_TOP VREF 0.1
+setvia 2 1 2
+addNet netname VREF width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  50 19
+addPin2Net  51 19
+longwire CTDSM_TOP net010 110.1
+setwidth CTDSM_TOP net010 0.1
+setvia 4 2 2
+addNet netname net010 width 200 cuts 4 isPower False rows 2 cols 2
+addPin2Net  52 20
+addPin2Net  53 20
+addPin2Net  54 20
+addPin2Net  55 20
+longwire CTDSM_TOP net012 110.1
+setwidth CTDSM_TOP net012 0.1
+setvia 4 2 2
+addNet netname net012 width 200 cuts 4 isPower False rows 2 cols 2
+addPin2Net  56 21
+addPin2Net  57 21
+addPin2Net  58 21
+addPin2Net  59 21
+setwidth CTDSM_TOP net028 0.1
+setvia 2 1 2
+addNet netname net028 width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  60 22
+addPin2Net  61 22
+setwidth CTDSM_TOP net020 0.1
+setvia 2 1 2
+addNet netname net020 width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  62 23
+addPin2Net  63 23
+setwidth CTDSM_TOP net040 0.1
+setvia 2 1 2
+addNet netname net040 width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  64 24
+setwidth CTDSM_TOP net025 0.1
+setvia 2 1 2
+addNet netname net025 width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  65 25
+addPin2Net  66 25
+setwidth CTDSM_TOP SYS_CLKB 0.1
+setvia 2 1 2
+addNet netname SYS_CLKB width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  67 26
+addPin2Net  68 26
+addPin2Net  69 26
+setwidth CTDSM_TOP net035 0.1
+setvia 2 1 2
+addNet netname net035 width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  70 27
+setwidth CTDSM_TOP net026 0.1
+setvia 2 1 2
+addNet netname net026 width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  71 28
+setwidth CTDSM_TOP net046 0.1
+setvia 2 1 2
+addNet netname net046 width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  72 29
+addPin2Net  73 29
+setwidth CTDSM_TOP net022 0.1
+setvia 2 1 2
+addNet netname net022 width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  74 30
+setwidth CTDSM_TOP net038 0.1
+setvia 2 1 2
+addNet netname net038 width 200 cuts 2 isPower False rows 1 cols 2
+addPin2Net  75 31
+routing grid off set -1200 -13200
+
+
+AcsMgr::computeAcs Start Access Points Generation
+
+DrMgr::solve Start Detailed Routing
+DrSymmetry::solve Start max symmetric detection
+DrSymmetry::solve Self-sym: DO
+DrSymmetry::solve Self-sym: GND
+DrSymmetry::solve Self-sym: IBIAS1
+DrSymmetry::solve Self-sym: IBIAS2
+DrSymmetry::solve Self-sym: SYS_CLK
+DrSymmetry::solve Self-sym: VCM
+DrSymmetry::solve Self-sym: VDD
+DrSymmetry::solve Sym:      VINN VINP
+DrSymmetry::solve Sym:      OTA1_INN OTA1_INP
+DrSymmetry::solve Sym:      OTA2_INN OTA2_INP
+DrSymmetry::solve Sym:      SUM_N SUM_P
+DrSymmetry::solve Sym:      VINT1N VINT1P
+DrSymmetry::solve Sym:      VINT2N VINT2P
+DrSymmetry::solve Self-sym: VREF
+DrSymmetry::solve Sym:      net010 net012
+DrSymmetry::solve Sym:      net028 net020
+DrSymmetry::solve Sym:      net040 net026
+DrSymmetry::solve Sym:      net025 net046
+DrSymmetry::solve Self-sym: SYS_CLKB
+DrSymmetry::solve Sym:      net035 net022
+DrSymmetry::solve Self-sym: net038
+
+DrGridRoute::runNRR	Iteration 0 Unrouted nets 2, GND VDD
+DrGridAstar::run	Route net GND, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridRoute::solveDR Solved!!!!
+
+DrGridRoute::runNRR	Iteration 0 Unrouted nets 20, net046 SYS_CLKB net025 net020 net028 net012 net010 VINT2P VINT2N VINT1P VINT1N SUM_P SUM_N OTA2_INP OTA2_INN OTA1_INP OTA1_INN SYS_CLK VCM VREF
+DrGridAstar::run	Route net VREF, Sym: 0, SelfSym: 1, StrictDRC: 1 
+DrGridAstar::run	Route net SYS_CLKB, Sym: 0, SelfSym: 1, StrictDRC: 1 
+DrGridAstar::run	Route net SYS_CLKB, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net VCM, Sym: 0, SelfSym: 1, StrictDRC: 1 
+DrGridAstar::run	Route net SYS_CLK, Sym: 0, SelfSym: 1, StrictDRC: 1 
+DrGridAstar::run	Route net SYS_CLK, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net net025, Sym: 1, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net net025, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net net046, Sym: 1, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net net046, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net VINT1N, Sym: 1, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net VINT1P, Sym: 1, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net net020, Sym: 1, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net net020, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net net028, Sym: 1, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net net028, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net SUM_N, Sym: 1, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net SUM_P, Sym: 1, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net OTA2_INN, Sym: 1, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net OTA2_INP, Sym: 1, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net OTA1_INN, Sym: 1, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net OTA1_INP, Sym: 1, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net VINT2N, Sym: 1, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net VINT2N, Sym: 1, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net VINT2N, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net VINT2P, Sym: 1, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net VINT2P, Sym: 1, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net VINT2P, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net net010, Sym: 1, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net net010, Sym: 1, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net net010, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net net012, Sym: 1, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net net012, Sym: 1, SelfSym: 0, StrictDRC: 1 
+DrGridAstar::run	Route net net012, Sym: 0, SelfSym: 0, StrictDRC: 1 
+DrGridRoute::ripupSingleNet Ripup net VCM (fail 1)
+
+DrGridRoute::runNRR	Iteration 1 Unrouted nets 1, VCM
+DrGridAstar::run	Route net VCM, Sym: 0, SelfSym: 1, StrictDRC: 1 
+DrGridRoute::solveDR Solved!!!!
+PostMgr::patchConvexJogs  Jog-1  2 (77400 211500) (77400 211470) (77300 211470) convex
+Net DO 1-pin ignored
+Net GND, wl: 2800, #via: 0, area: 3815000.00, degSym: 0.00
+Net IBIAS1 1-pin ignored
+Net IBIAS2 1-pin ignored
+Net SYS_CLK, wl: 209200, #via: 4, area: 43347800.00, degSym: 0.00
+Net VCM, wl: 350400, #via: 4, area: 71530200.00, degSym: 1.00
+Net VDD route failed
+Net VINN 1-pin ignored
+Net VINP 1-pin ignored
+Net OTA1_INN, wl: 275600, #via: 4, area: 118171800.00, degSym: 1.00
+Net OTA1_INP, wl: 275600, #via: 4, area: 118171800.00, degSym: 1.00
+Net OTA2_INN, wl: 211200, #via: 3, area: 45016600.00, degSym: 1.00
+Net OTA2_INP, wl: 211200, #via: 3, area: 45016600.00, degSym: 1.00
+Net SUM_N, wl: 130400, #via: 0, area: 26175000.00, degSym: 1.00
+Net SUM_P, wl: 130400, #via: 0, area: 26175000.00, degSym: 1.00
+Net VINT1N, wl: 90000, #via: 2, area: 18926200.00, degSym: 1.00
+Net VINT1P, wl: 90000, #via: 2, area: 18926200.00, degSym: 1.00
+Net VINT2N, wl: 291200, #via: 6, area: 63442200.00, degSym: 0.66
+Net VINT2P, wl: 292800, #via: 6, area: 63762200.00, degSym: 0.66
+Net VREF, wl: 101600, #via: 0, area: 20375000.00, degSym: 1.00
+Net net010, wl: 414400, #via: 5, area: 87319000.00, degSym: 0.49
+Net net012, wl: 414800, #via: 7, area: 88846200.00, degSym: 0.49
+Net net028, wl: 158000, #via: 4, area: 33107800.00, degSym: 0.00
+Net net020, wl: 157200, #via: 4, area: 32947800.00, degSym: 0.00
+Net net040 1-pin ignored
+Net net025, wl: 42400, #via: 0, area: 8535000.00, degSym: 0.22
+Net SYS_CLKB, wl: 109200, #via: 0, area: 21895000.00, degSym: 0.95
+Net net035 1-pin ignored
+Net net026 1-pin ignored
+Net net046, wl: 43200, #via: 0, area: 8695000.00, degSym: 0.21
+Net net022 1-pin ignored
+Net net038 1-pin ignored
+---------- Anaroute             total  time usage -----------
+Real: 4.747192s; User: 4.708853s; System: 0.038205s
+
+Total wl: 4001600, Total #via: 58, Total Sym wl: 2784800, Total degSym: 0.6959, Avg degSym: 0.6520
+
+Writing Routing GDS Layout ./CTDSM_TOP.route.gds
+Writing Dumb File ./CTDSM_TOP.ioPin
+PnR: routing finished  CTDSM_TOP
+

@@ -24,29 +24,29 @@
 namespace bLib
 {
     // =================================================================
-    //                  Parse string
+    //                  Parse string    分析字符串
     // =================================================================
-    // trim left space of a string
+    // trim left space of a string      修剪字符串的左空格
     inline std::string & ltrim(std::string &s)
     {
         s.erase(s.begin(), std::find_if(s.begin(), s.end(), std::not1(std::ptr_fun<int, int>(std::isspace))));
         return s;
     }
 
-    // trim right space of a string
+    // trim right space of a string     修剪字符串的右空格
     inline std::string & rtrim(std::string &s)
     {
         s.erase(std::find_if(s.rbegin(), s.rend(), std::not1(std::ptr_fun<int, int>(std::isspace))).base(), s.end());
         return s;
     }
 
-    // trim spaces from both ends
+    // trim spaces from both ends       从两端修剪空间
     inline std::string & trim(std::string &s)
     {
         return ltrim(rtrim(s));
     }
 
-    // given path in str_path, output the design name
+    // given path in str_path, output the design name       在str_path中给定路径，输出设计名称
     // for example: with input "path1/path2/sparc_exu_alu", output "sparc_exu_alu"
     inline std::string parsePath2Name(std::string str_path)
     {
@@ -56,7 +56,7 @@ namespace bLib
         return str_path.substr(pos+1);
     }
 
-    // parse filename suffix
+    // parse filename suffix        解析文件名后缀
     inline std::string parseSuffix(std::string str)
     {
         size_t pos = str.rfind('.');
@@ -64,7 +64,7 @@ namespace bLib
         return str.substr(pos+1);
     }
 
-    // trim filename suffix
+    // trim filename suffix         修剪文件名后缀
     inline std::string trimSuffix(std::string str)
     {
         size_t pos = str.rfind('.');
@@ -73,7 +73,7 @@ namespace bLib
 
 
     // ============================================================
-    //                   Read File Functions
+    //                   Read File Functions  读取文件函数   
     // ============================================================
     // check whether file exists
     inline bool isFileExist(const char* filename)
@@ -82,9 +82,9 @@ namespace bLib
         return infile.good();
     }
 
-    // read from ifstream in, search target1 & target2,
-    // if found, return true, and the whole line is stored in "str_line"
-    // if reach EOF, return false
+    // read from ifstream in, search target1 & target2,                         从ifstream中读取，搜索target1&target2，
+    // if found, return true, and the whole line is stored in "str_line"        如果找到，则返回true，整行存储在“str_line”中
+    // if reach EOF, return false                                               如果达到EOF，则返回false
     inline bool readSearchUntil(std::ifstream& in, std::string & str_line, const std::string target1, const std::string target2="")
     {
         while (!in.eof())
@@ -97,7 +97,7 @@ namespace bLib
         return false;
     }
 
-    // new version of readSearchUntil() to support arbitrary number targets
+    // new version of readSearchUntil() to support arbitrary number targets     新版readSearchUntil（）支持任意数量的目标
     inline bool readSearchUntil(std::ifstream& in, std::string& str_line, const std::vector<std::string> targets)
     {
         while (!in.eof())
@@ -114,7 +114,7 @@ namespace bLib
 
 
     // ============================================================
-    //               Numerical functions
+    //               Numerical functions    数字函数
     // ============================================================
     inline bool isInteger(float fvalue)
     {
@@ -125,7 +125,7 @@ namespace bLib
 
 
     // ==============================================
-    //             timer functions
+    //             timer functions     时间函数
     // ==============================================
     inline double timerSelf()
     {
@@ -148,9 +148,9 @@ namespace bLib
 
 
     // ==============================================
-    //            STL extension 
+    //            STL extension     STL 扩展库
     // ==============================================
-    // erase vec[id], can NOT keey the previous order in rest of the vector
+    // erase vec[id], can NOT keey the previous order in rest of the vector     擦除vec[id]，不能保留容器其余部分的前一顺序
     template<class Type>
     inline bool erase_fast(std::vector<Type>& vec, int id)
     {

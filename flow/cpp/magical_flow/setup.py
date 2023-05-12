@@ -67,3 +67,14 @@ setup(
     cmdclass=dict(build_ext=CMakeBuild),
     zip_safe=False,
 )
+
+"""
+
+在setup.py定义并编译安装magicalFlow模块后,在Python中可以直接导入它。
+setup.py文件的作用就是编译和安装magicalFlow模块,使其可以在Python中导入和使用。安装完成后,magicalFlow模块就会放在以下位置:
+1. 系统的site-packages目录下,例如/usr/lib/python3.7/site-packages。这需要root权限,一般不推荐。
+2. 虚拟环境的site-packages目录下。如果是在虚拟环境中安装,magicalFlow就会放在虚拟环境的site-packages目录。
+3. 当前用户的site-packages目录下,例如~/.local/lib/python3.7/site-packages。如果在用户环境下编译安装,magicalFlow就会放在这里。
+将magicalFlow模块放在Python可搜索的路径后,就可以在Python中直接导入它了
+
+"""

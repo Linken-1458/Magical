@@ -42,10 +42,10 @@ struct point_traits<PROJECT_NAMESPACE::XY<T>>
         else assert(0);
     }
     /**
-     * @brief set coordinates 
-     * @param point a data point 
-     * @param orient orientation can be HORIZONTAL(x) or VERTICAL(y)
-     * @param value data value 
+     * @brief set coordinates       设置坐标 
+     * @param point a data point    数据点
+     * @param orient orientation can be HORIZONTAL(x) or VERTICAL(y)        方向可以是水平（x）或垂直（y）
+     * @param value data value       数据值 
      */
     static void set(point_type& point, orientation_2d orient, coordinate_type value) 
     {
@@ -54,10 +54,10 @@ struct point_traits<PROJECT_NAMESPACE::XY<T>>
         else assert(0);
     }
     /**
-     * @brief construct a point object
-     * @param x x coordinate 
-     * @param y y coordinate
-     * @return the point object
+     * @brief construct a point object      构造点对象 
+     * @param x x coordinate            X坐标
+     * @param y y coordinate            y坐标
+     * @return the point object         点对象
      */
     static point_type construct(coordinate_type x, coordinate_type y) 
     {
@@ -74,20 +74,21 @@ namespace limbo { namespace geometry {
 
 /**
  * @brief if your rectangle class setting is different from that in the default point_traits, please create a specialization
+ *  如果你的矩形类设置与默认的point_traits中的不同，请创建一个专门化
  */
 template <typename T>
 struct rectangle_traits<PROJECT_NAMESPACE::Box<T>>
 {
-    /// rectangle type 
+    /// rectangle type      矩形类型
     typedef PROJECT_NAMESPACE::Box<T> rectangle_type;
-    /// coordinate type 
+    /// coordinate type         坐标类型 
     typedef T coordinate_type;
 
     /**
-     * @brief access coordinates 
-     * @param rect a rectangle object
-     * @param dir can be LEFT (xl), BOTTOM (yl), RIGHT (xh) or TOP (yh)
-     * @return coordinate
+     * @brief access coordinates        访问坐标
+     * @param rect a rectangle object       矩形对象 
+     * @param dir can be LEFT (xl), BOTTOM (yl), RIGHT (xh) or TOP (yh)     可以是LEFT（xl）、BOTTOM（yl）、RIGHT（xh）或TOP（yh）
+     * @return coordinate       坐标
      */
     static coordinate_type get(const rectangle_type& rect, direction_2d dir) 
     {
@@ -101,10 +102,10 @@ struct rectangle_traits<PROJECT_NAMESPACE::Box<T>>
         }
     }
     /**
-     * @brief set coordinates 
-     * @param rect a rectangle object
-     * @param dir can be LEFT (xl), BOTTOM (yl), RIGHT (xh) or TOP (yh)
-     * @param value coordinate value
+     * @brief set coordinates           访问坐标
+     * @param rect a rectangle object       矩形对象 
+     * @param dir can be LEFT (xl), BOTTOM (yl), RIGHT (xh) or TOP (yh)     可以是LEFT（xl）、BOTTOM（yl）、RIGHT（xh）或TOP（yh）
+     * @param value coordinate value        坐标值
      */
     static void set(rectangle_type& rect, direction_2d dir, coordinate_type value) 
     {
@@ -118,9 +119,9 @@ struct rectangle_traits<PROJECT_NAMESPACE::Box<T>>
         }
     }
     /**
-     * @brief construct rectangle 
-     * @param xl, yl, xh, yh coordinates of rectangle
-     * @return a rectangle object
+     * @brief construct rectangle       构造矩形
+     * @param xl, yl, xh, yh coordinates of rectangle   矩形坐标     
+     * @return a rectangle object       矩形对象 
      */
     static rectangle_type construct(coordinate_type xl, coordinate_type yl, coordinate_type xh, coordinate_type yh) 
     {

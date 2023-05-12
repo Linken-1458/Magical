@@ -43,8 +43,8 @@ class DesignDB
         /// @param the index of the sub circuit
         /// @return the sub circuit in the hierarchical tree
         CktGraph & subCkt(IndexType idx) { return _ckts.at(idx); }
-        /// @brief get the index of the root node
-        /// @return the index of the root node
+        /// @brief get the index of the root node 获取根节点的索引
+        /// @return the index of the root node  返回根节点的索引
         IndexType rootCktIdx() const { return _rootCkt; }
         /// @brief get PhyPropDB
         /// @return the physical property DB
